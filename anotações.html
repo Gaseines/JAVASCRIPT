@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotações</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        code{
+            color: rgb(182, 6, 182);
+            
+        }
+        p.ex{
+            text-align: center;
+            padding: 5px;
+            width: 200px;
+            color: rgb(5, 179, 5);
+            border: 1px solid rgba(0, 0, 0, 0.466);
+        }
+    </style>
+</head>
+<body>
+    <h1>Anotações</h1>
+
+    <h2>Números</h2>
+    <h3>Converter para Número</h3>
+    <p> Para números inteiros usar : <code>Number.parseInt(n)</code></p>
+    <p>Para números reais usar: <code>Number.parseFloat(n)</code></p>
+    <p>Modo simplificado usar: <code>Number(n)</code></p>
+    <h3>Formatação de número</h3>
+    <p>Para casas decimais usar: <code>n1.toFixed(2)</code></p><p class="ex">1545.5 <br> > 1545.50</p>
+    <p>Para trocar dados usar: <code>n1.toFixed(2).replace('.', ',')</code></p>
+    <p class="ex">1545.50 <br> >1545,50</p>
+    <p>Para colocar cifrão usar: <code>n1.toLocaleString('pt-BR', {style: 'currency', currency: 'brl' })</code></p>
+    <p class="ex">1545.5 <br> > R$ 1.545,50</p>
+
+    <h2>String</h2>
+    <h3>Converter para String</h3>
+    <p><code>String(s)</code><br> ou <br> <code>n.toString(s)</code></p>
+    <h3>Quantidade de caracteres</h3>
+    <p><code>s.length</code></p>
+    <h3>MAIÚSCULA</h3>
+    <P><code>s.toUpperCase()</code></P>
+    <h3>minúsculas</h3>
+    <p><code>s.toLowerCase()</code></p>
+
+    <h2>Concatenação</h2>
+    <p>Para concatenação padrão usa-se ' aspas simples e com +. Exemplo: <br> <code>'Estou aprendendo' + s</code></p>
+    <p>Para o uso de "abreviações" (template string) didita-se com ` crase e ${}. Exemplo: <br> <code>`Estou aprendendo ${s}`</code></p>
+    
+</body>
+</html>
