@@ -23,7 +23,8 @@
             position: absolute;
         }
         div{
-            width: 50vw;
+            width: 100vw;
+            height: 100px;
             margin: auto;
             text-align: center;
             position: relative;
@@ -38,6 +39,10 @@
             font-size: 5em;
             font-family: bolha, Arial, Helvetica, sans-serif;
         }
+        div > p:hover{
+            color: red;
+            cursor: default;
+        }
     </style>
 </head>
 <body>
@@ -47,23 +52,35 @@
         <p id="seg">00</p>
     </div>
     <script>
-        var agora = new Date()
-        var hora = agora.getHours()
-        var minu = agora.getMinutes()
-        var sec = agora.getSeconds()
+        
         var hr = document.getElementById('hr')
         var min = document.getElementById('min')
         var seg = document.getElementById('seg')
+        
 
-        if(document.body.style == ''){
-            
-        
-        }else{
-            hr.innerText = `${hora}:`
-        min.innerText = `${minu}:`
-        seg.innerText = sec
-        
+        var relogio = setInterval(function time(){
+            var agora = new Date()
+        var hora = agora.getHours()
+        var minu = agora.getMinutes()
+        var sec = agora.getSeconds()
+        hr.innerText = `${hora}:`
+        if(hora < 10){
+            hr.innerText = `0${hora}:`
+
         }
+        min.innerText = `${minu}:`
+        if(minu < 10){
+            min.innerText = `0${minu}:`
+
+        }
+        seg.innerText = sec
+        if(sec < 10){
+            seg.innerText = `0${sec}`
+
+        }
+        })
+        
+        
         
         
         
