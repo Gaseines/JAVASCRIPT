@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+    <style>
+
+        @font-face {
+            font-family: 'bolha';
+            src: url(Boba\ Cups.ttf) format('truetype');
+        }
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            position: absolute;
+        }
+        div{
+            width: 50vw;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            top: 45%;
+
+            
+            
+        }
+        div > p{
+            color: white;
+            display: inline;
+            font-size: 5em;
+            font-family: bolha, Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="relógio">
+        <p id="hr">00</p>
+        <p id="min">00</p>
+        <p id="seg">00</p>
+    </div>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var minu = agora.getMinutes()
+        var sec = agora.getSeconds()
+        var hr = document.getElementById('hr')
+        var min = document.getElementById('min')
+        var seg = document.getElementById('seg')
+
+        if(document.body.style == ''){
+            
+        
+        }else{
+            hr.innerText = `${hora}:`
+        min.innerText = `${minu}:`
+        seg.innerText = sec
+        
+        }
+        
+        
+        
+    </script>
+</body>
+</html>
