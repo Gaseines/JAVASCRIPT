@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: black;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        input#in1{
+            width: 100px;
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+            font-weight: bold;
+            
+        }
+        input#in2{
+            width: 100px;
+            background-color: black;
+            border: 1px solid white;
+            color: white;
+            font-weight: bold;
+        }
+        p#res{
+            display: inline;
+        }
+        p#txtRes{
+            display: inline;
+        }
+        input#btn{
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            margin-bottom: 10px;
+        }
+        input#btn:hover{
+            background-color: rgb(255, 255, 255);
+            color: black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Soma de números</h1>
+    <form action="#">
+        <p>
+            <label for="in1">Digite o primeiro número: </label>
+            <input type="number" name="n1" id="in1" >
+        </p>
+        <p><label for="in2">Digite o segundo número:</label>
+        <input type="number" name="n2" id="in2">
+        </p>
+        <p><input type="button" value="Somar" id="btn" onclick="clicar()"></p>
+        <p id="res">Resultado: 0</p>
+    </form>
+    <script>
+        
+        
+
+        function clicar(){
+        var tn1 = document.getElementById('in1')
+        var tn2 = document.getElementById('in2')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var res = document.getElementById('res')
+        var soma = n1 +n2
+        res.innerText =  `Resultado: ${soma}`
+        }
+
+    </script>
+</body>
+</html>
