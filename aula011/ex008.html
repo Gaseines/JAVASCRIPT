@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>País de origem</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to bottom right, green, yellow, blue);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        h1{
+            font-size: 2.5em;
+            padding: 10px;
+        }
+        p{
+            font-size: 1.5em;
+            padding: 10px;
+        }
+        p > select{
+            background-color: transparent;
+            font-size: 0.8em;
+            border: 0.5px solid black;
+        }
+        p > select:active{
+            background-color: transparent;
+            font-size: 0.8em;
+            border: 0.5px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Nacional ou Estrangeiro</h1>
+    <p>Escolha sua nacionalidade 
+        <select name="nac" id="inac" onclick="Clicar()">
+            <option value="select">--- Selecione ---</option>
+            <option value="Br">Brasil</option>
+            <option value="EUA">Estados Unidos</option>
+            <option value="FR">França</option>
+            <option value="AU">Australia</option>
+            <option value="RU">Russia</option>
+        </select>
+    </p>
+    <p id="res"></p>
+    <script>
+        var nac = document.getElementById('inac')
+        var res = document.getElementById('res')
+        function Clicar(){
+            var value = nac.options[nac.selectedIndex].value
+            var name = nac.options[nac.selectedIndex].text
+            
+            if(value == 'select'){
+                res.innerHTML = 'Olá!'
+            }else{
+                if(value == 'Br'){
+                    res.innerHTML = `Olá, você mora no ${name} e não é estrangeiro! Seja bem vindo!`
+                }else{
+                    res.innerHTML = `Olá, você mora no(a) ${name} e é estrangeiro! Seja bem vindo!`
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
