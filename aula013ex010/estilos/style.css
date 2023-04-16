@@ -25,7 +25,6 @@ section#sec{
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.404);
 }
 p#horas{
-    font-weight: bold;
     font-size: 1.2em;
     margin-bottom: 10px;
 }
@@ -46,7 +45,7 @@ img#noit{
     display: none;
 }
 p#saud{
-    font-weight: bold;
+    
     font-size: 1.2em;
     margin-bottom: 10px;
 }

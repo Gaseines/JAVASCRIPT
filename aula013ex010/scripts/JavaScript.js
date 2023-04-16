@@ -14,15 +14,15 @@ var agora = new Date()
         }else{
             if(hr >= 12 && hr <= 18){
                 txtHoras.innerHTML = `Agora são ${hr} Horas.`
-            img2.style.display = 'inline-block'
-            saudacao.innerHTML = 'Boa tarde! Seja bem vindo!'
-            document.body.style.background = '#ff895a'
+                img2.style.display = 'inline-block'
+                saudacao.innerHTML = 'Boa tarde! Seja bem vindo!'
+                document.body.style.background = '#ff895a'
             }else{
                 if(hr < 5 || hr > 18){
                     txtHoras.innerHTML = `Agora são ${hr} Horas.`
-            img3.style.display = 'inline-block'
-            saudacao.innerHTML = 'Boa noite! Seja bem vindo!'
-            document.body.style.background = 'darkblue'
+                    img3.style.display = 'inline-block'
+                    saudacao.innerHTML = 'Boa noite! Seja bem vindo!'
+                    document.body.style.background = 'darkblue'
                 }
             }
         }
