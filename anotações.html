@@ -12,14 +12,14 @@
             color: white;
         }
         code{
-            color: rgb(182, 6, 182);
+            color: rgb(5, 179, 5);;
             
         }
         p.ex{
             text-align: center;
             padding: 5px;
             width: 200px;
-            color: rgb(5, 179, 5);
+            color: rgb(6, 176, 182);
             border: 1px solid rgba(0, 0, 0, 0.466);
         }
     </style>
@@ -28,10 +28,12 @@
     <h1>Anotações</h1>
 
     <h2>Números</h2>
+
     <h3>Converter para Número</h3>
     <p> Para números inteiros usar : <code>Number.parseInt(n)</code></p>
     <p>Para números reais usar: <code>Number.parseFloat(n)</code></p>
     <p>Modo simplificado usar: <code>Number(n)</code></p>
+
     <h3>Formatação de número</h3>
     <p>Para casas decimais usar: <code>n1.toFixed(2)</code></p><p class="ex">1545.5 <br> > 1545.50</p>
     <p>Para trocar dados usar: <code>n1.toFixed(2).replace('.', ',')</code></p>
@@ -40,12 +42,15 @@
     <p class="ex">1545.5 <br> > R$ 1.545,50</p>
 
     <h2>String</h2>
+
     <h3>Converter para String</h3>
     <p><code>String(s)</code><br> ou <br> <code>n.toString(s)</code></p>
+
     <h3>Quantidade de caracteres</h3>
     <p><code>s.length</code></p>
     <h3>MAIÚSCULA</h3>
     <P><code>s.toUpperCase()</code></P>
+
     <h3>minúsculas</h3>
     <p><code>s.toLowerCase()</code></p>
 
@@ -54,28 +59,56 @@
     <p>Para o uso de "abreviações" (template string) didita-se com ` crase e ${}. Exemplo: <br> <code>`Estou aprendendo ${s}`</code></p>
 
     <h2>Operadores</h2>
+
     <h3>Aritiméticos</h3>
     <p>Soma: + <br> Subtração: - <br> Multiplicação: * <br> Divisão Real: / <br> Divisão Inteira: % <br> Potencia: **</p>
+
     <h3>Lógicos</h3>
     <p>!  negação 1º<br> &&  conjunção 2º<br> ||  disjunção 3º</p>
     <p><code>idade >= 15 && idade <=17</code> // a idade está entre 15 e 17?</p>
     <p><code>estado == 'RJ' || estado == 'SP'</code>// o estado é RJ ou SP?</p>
     <p><code>salário > 1500 && sexo != 'M'</code>// salário é maior que 1500 e é mulher?</p>
+
     <h3>Ternários</h3>
     <p>? <br>e <br> :</p>
     <p><code>teste ? true : false</code></p>
     <p>Ex: <br> <code>média >= 7.0 ? "Aprovado" : "Reprovado"</code></p>
+
     <h2>Árvore DOM</h2>
     <p>Respeitar sempre a hirearquia, começando por <code>window.</code></p>
+
     <h3>Selecionando</h3>
     <p>Por Marca: <br> <code>getElementsByTagName()</code></p>
     <p>Por ID: <br> <code>getElementById()</code></p>
     <p>Por Nome: <br> <code>getElementsByName()</code></p>
     <p>Por Classe: <br> <code>getElementsByClassName()</code></p>
     <p>Por Seletores:  <br> <code>querySelector(div#id)</code></p>
+
     <h2>Eventos DOM</h2>
     <p>link com todos os eventos: <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank">Link</a></p>
+
+    <h2>Condições</h2>
+
+    <p>Simples: <br> 
+        <code>if(condição){ <br> <br> }</code></p>
+
+    <p>Composta: <br> 
+        <code>if(condição){ <br> <br> }else{ <br> <br> }</code></p>
+
+    <p>Aninhadas: <br> <code>if(condição 1){ <br> <br> }else{ if(condição 2){ <br> <br> }else{ <br> <br> }<br> }</code></p>
+
+    <p>Múltipla: <br> 
+        <code>switch(expressão){ <br> case valor1: <br> <br> case valor2: <br> <br> case valor3: <br> <br> default: <br> <br> }</code></p>
+
     <h2>Repetições</h2>
+    <p>Primeiro testa e depois executa: <br> 
+        <code>while(condição){ <br> <br>}</code></p>
+
+    <p>Executa depois faz o teste: <br> 
+        <code>do { <br> <br> } while(condição)</code></p>
+
+    <p>Inicia, testa e incrementa: <br>
+    <code>for(inicio; teste; incremento){ <br><br> }</code></p>
     
     
 </body>
