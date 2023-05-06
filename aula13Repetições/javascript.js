@@ -12,3 +12,5 @@ do{
 for (var t = 1; t <= 5; t++){
     console.log(`Teste ${t}`)
 }
+
+//CLIQUE F8 PARA ABRIR O CONSOLE
