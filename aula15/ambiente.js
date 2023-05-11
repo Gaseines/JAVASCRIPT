@@ -22,5 +22,6 @@ console.log(div)
 let num3 = [55, 44, 33, 5 , 6, 8, 10]
 
 for(let pos in num3){
+    num3.sort()
     console.log(`A posição ${pos} tem o valor ${num3[pos]}`)
 }
