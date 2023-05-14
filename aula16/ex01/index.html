@@ -12,8 +12,8 @@
     <section id="form">
         <div>
             <p>Número (entre 1 e 100): 
-                <input type="number" name="num" id="inum">
-                <input type="button" value="Adicionar" onclick="add()">
+                <input type="number" name="num" id="inum" >
+                <input type="button" value="Adicionar" id="btn" onclick="add()" keydown(enter)>
             </p>
         </div>
         <div>
@@ -24,7 +24,9 @@
         <input type="button" value="Finalizar" onclick="fim()">
         <div id="txt"></div>
     </section>
+    <spline-viewer url="https://prod.spline.design/fJ2ptJKzT-sDkpfO/scene.splinecode" background="rgb(42, 92, 253)"></spline-viewer>
     <footer>@gaseines</footer>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
