@@ -1,0 +1,53 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: white;
+}
+code{
+    color: rgb(5, 179, 5);
+    
+}
+p.ex{
+    text-align: center;
+    padding: 5px;
+    width: 200px;
+    color: rgb(6, 62, 182);
+    border: 1px solid rgba(0, 0, 0, 0.466);
+}
+
+#btn{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+}
+
+#black, #white{
+    height: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#black{
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    
+}
+
+#black:hover{
+    background-color: rgb(39, 39, 39);
+}
+
+#white{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+#white:hover{
+    background-color: rgb(202, 202, 202);
+}
