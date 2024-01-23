@@ -2,7 +2,11 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
+
+    margin: 10px;
+    
 }
+
 code{
     color: rgb(5, 179, 5);
     

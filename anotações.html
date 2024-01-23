@@ -124,18 +124,40 @@
     
     <hr>
 
-    <h2>Variaveis Compostas</h2>
+    <h2>Biblioteca Math</h2>
+    <p>Funções prontas de Matemática</p>
+
+    <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Link da biblioteca</a></p>
+    
+
+    <hr>
+
+    <h2>Array</h2>
+    <p><code>let arr = [ 1, 4, 7, 5, 12]</code></p>
+    <p><code>let nomes = ['Gabriel', 'Luiza', 'Mariana']</code></p>
+    <p><code>let bool = [true, false]</code></p>
+    <p><code>let Misturado = [1, 'Gabrie', true]</code></p>
+
+    <p>Primeira casa do array sempre será 0</p>
+
+    <h3>Propriedades Array</h3>
+
+    <p><code>let arr = [1,5,3,6,9,7]</code></p>
+    <p><code>console.log(arr.length)</code> Retorna quantidade de itens no array = 6</p>
+    <p><code>console.log(arr[0])</code>Mostra primeiro item do array = 1</p> 
+    <p><code>console.log(arr[arr.length - 1 ]) </code> Mostra o ultimo item do array = 7</p>
+
+    <h3>Metodos Array (Funções)</h3>
     <p><code>let num = [5, 8, 4]</code></p>
     <p><code>num [3] = 6</code> Substitui a casa 3</p>
     <p><code>num.push(7)</code> Adiciona a ultima casa</p>
+    <p><code>num.pop()</code> Remove a ultima casa</p>
+    <p><code>num.unshift(7)</code> Adiciona a primeira casa</p>
+    <p><code>num.shift()</code> Remove a primeira casa</p>
     <p><code>num.length</code>Tamanho</p>
     <p><code>num.sort()</code>Organiza em ordem crescente</p>
     <p><code>num.indexOf(8)</code>Busca um valor específico dentro da variavel</p>
 
-    <hr>
-
-    <h2>Biblioteca Math</h2>
-    <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Link da biblioteca</a></p>
     
 
     <hr>
@@ -143,5 +165,52 @@
 
     <h2>Objetos</h2>
     <p><code>let amigo = {nome:'José',sexo:'M',peso:75.5,engordar(p){}}</code></p>
+    <p><code>console.log(amigo.nome)</code> Retorna o nome no Objeto</p>
+    <p><code>console.log(amigo.peso)</code> Retorna o peso no Objeto</p>
+
+    <h3>Propriedades</h3>
+
+    <h4>Adiciona e Remove Itens</h4>
+    <p><code>
+        let carro = {
+        marca: "Honda",
+        portas: 4,
+        manual: true,
+        motor: 1.7,
+        velocidade: "Rapido"
+    }</code></p>
+    <p><code>delete carro.velocidade</code> Deleta a informação de "velocidade"</p>
+    <p><code>carro.tetoSolar = false</code> Adiciona a informação de "tetoSolar"</p>
+    <p><code>console.log(carro.tetoSolar)</code> Mostra a informação de "tetoSolar"</p>
+
+    <h4>Copia de um Objeto para outro</h4>
+
+    <p><code>let obj1 = {
+        nome: "Gabriel",
+        idade: 21
+    }</code></p>
+    <p><code>let obj2 = {
+        carro: "Honda Civic"
+    }</code></p>
+    <p><code>Object.assign(obj1, obj2)</code> Copia as propriedades do "obj2" para o "obj1"</p>
+
+    <p>Resultado: <code>let obj1 = {
+        nome: "Gabriel",
+        idade: 21,
+        carro: "Honda Civic"
+    }</code></p>
+
+    <h4>Keys</h4>
+
+    <p><code>let obj = {
+        chave1: 1,
+        chave2: 2,
+        chave3: 3
+    }</code></p>
+    <p><code>console.log(Object.keys(obj))</code> Mostra apenas o nome dos dados do objeto</p>
+
+    <h4>Mutações</h4>
+
+    <p>Conferir em Objeto > propriedades > mutacao</p>
 </body>
 </html>
