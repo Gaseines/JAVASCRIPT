@@ -44,9 +44,18 @@
     <h3>minúsculas</h3>
     <p><code>s.toLowerCase()</code></p>
 
-    <h2>Concatenação</h2>
+    <h3>Concatenação</h3>
     <p>Para concatenação padrão usa-se ' aspas simples e com +. Exemplo: <br> <code>'Estou aprendendo' + s</code></p>
     <p>Para o uso de "abreviações" (template string) didita-se com ` crase e ${}. Exemplo: <br> <code>`Estou aprendendo ${s}`</code></p>
+
+    <h3>Metodos de string</h3> <br>
+    <p><code>let palavra = '      \n   Gabriel      \n' <br>
+    palavra.trim()</code> Retorna "Gabriel" sem os espaços e possiveis erros de digitação</p>
+    <br>
+    <p><code>let str = "55" <br>
+    str.padStart(6, "0")</code> primeira condição é quantas casas a string vai ter antes do valor (no caso seriam 6 casas preenchidas por 0, ficando 000055)</p> <br>
+
+    <p><code>str.padEnd(6, "0")</code>primeira condição é quantas casas a string vai ter depois do valor (no caso seriam 6 casas preenchidas por 0, ficando 550000)</p>
 
     <hr>
 
@@ -148,15 +157,26 @@
     <p><code>console.log(arr[arr.length - 1 ]) </code> Mostra o ultimo item do array = 7</p>
 
     <h3>Metodos Array (Funções)</h3>
-    <p><code>let num = [5, 8, 4]</code></p>
-    <p><code>num [3] = 6</code> Substitui a casa 3</p>
-    <p><code>num.push(7)</code> Adiciona a ultima casa</p>
-    <p><code>num.pop()</code> Remove a ultima casa</p>
-    <p><code>num.unshift(7)</code> Adiciona a primeira casa</p>
-    <p><code>num.shift()</code> Remove a primeira casa</p>
-    <p><code>num.length</code>Tamanho</p>
-    <p><code>num.sort()</code>Organiza em ordem crescente</p>
-    <p><code>num.indexOf(8)</code>Busca um valor específico dentro da variavel</p>
+    <p><code>let num = [5, 8, 4, 3, 5]</code></p> <br>
+    <p><code>num [3] = 6</code> Substitui a casa 3</p> <br>
+    <p><code>num.push(7)</code> Adiciona a ultima casa</p> <br>
+    <p><code>num.pop()</code> Remove a ultima casa</p> <br>
+    <p><code>num.unshift(7)</code> Adiciona a primeira casa</p> <br>
+    <p><code>num.shift()</code> Remove a primeira casa</p> <br>
+    <p><code>num.length</code>Tamanho</p> <br>
+    <p><code>num.sort()</code>Organiza em ordem crescente</p> <br>
+    <p><code>num.reverse()</code> Retorna os valores do array só que ao contrario</p> <br>
+    <p><code>num.indexOf(8)</code>Busca um valor específico dentro da variavel (ele retorna o número do índice, nesse caso seria 1)</p> <br>
+    <p><code>num.lastIndexOf(5)</code>Busca o ultimo numero que está na condição (Retorna o número do índice, nesse caso seria 4)</p> <br>
+    <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
+    <p><code>num.slice(2, 3)</code>Retorna um valor específico de dentro do array, na condição se coloca o indice que você quer até o indice posterior do ultimo (Nesse caso retornaria 4)</p>
+    <p>Nesse outro caso <code>num.slice(2)</code> Ele retorna os valores até o ultimo indice do array (retornaria 4, 3, 5) </p>
+    <p>Outros exemplos em uDemy > array > metodos > Slice</p> <br>
+    <p><code>num.forEach(numeros =>{<br>
+        console.log(numeros) <br>
+     })</code> <br> Repetição (estilo for) específico para arrays. No exemplo acima ele retornaria 5, 8, 4, 3, 5</p> <br>
+
+     <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
 
     
 
@@ -211,6 +231,7 @@
 
     <h4>Mutações</h4>
 
-    <p>Conferir em Objeto > propriedades > mutacao</p>
+    <p>Copia exatamente o mesmo Objeto</p>
+    <p>Conferir em uDemy > objeto > propriedades > mutacao</p>
 </body>
 </html>
