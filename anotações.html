@@ -52,10 +52,27 @@
     <p><code>let palavra = '      \n   Gabriel      \n' <br>
     palavra.trim()</code> Retorna "Gabriel" sem os espaços e possiveis erros de digitação</p>
     <br>
+
     <p><code>let str = "55" <br>
-    str.padStart(6, "0")</code> primeira condição é quantas casas a string vai ter antes do valor (no caso seriam 6 casas preenchidas por 0, ficando 000055)</p> <br>
+    str.padStart(6, "0")</code> primeira condição é quantas casas a string vai ter antes do valor (no caso seriam 6 casas preenchidas por 0, ficando 000055)</p> 
+    <br>
 
     <p><code>str.padEnd(6, "0")</code>primeira condição é quantas casas a string vai ter depois do valor (no caso seriam 6 casas preenchidas por 0, ficando 550000)</p>
+    <br>
+
+    <p><code>let numeros = "5; 7; 8; 9; 2;"</code></p>
+    <p><code>numeros.split(";")</code>Retorna um array com dados baseados no separador que nesse caso é o " ; "( nesse caso retornaria ['5', '7', '8', '9', '2'] )</p>
+    <br>
+
+    <p><code>let frase = "Testando o método join"</code></p>
+    <p><code>frase.join("--")</code>Vai retornar a string editada, substituindo os divisores(nesse caso os espaços) por " -- ", ficando "Testando--o--método--join"</p>
+    <br>
+
+    <p><code>let palavra = "Repetir "</code></p>
+    <p><code>palavra.repeat(5)</code> Retorna a string repetindo quantas vezes você declarar, nesse caso 5</p>
+    <br>
+
+
 
     <hr>
 
@@ -178,6 +195,21 @@
 
      <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
 
+     <h3>Rest operator</h3>
+
+     <p><code>function imprimirNumeros(...args){ <br>
+         for(let i = 0; i < args.length; i++){<br>
+            console.log(args[i]) 
+         } } <br></code>Uma forma de uma função receber varios parâmetros. <br> O operador Rest vira um array. <br> O parâmetro é definido por: ...nome (nesse caso ...args)</p> <br>
+
+         <h3>Destructuring com Array</h3>
+
+         <p><code>let nomes = ["Gabriel", "Luiza", "Mariana"] <br><br>
+
+            let [nomeA, nomeB, nomeC] = nomes <br><br>
+            
+            console.log(nomeA)</code> <br><br> Podemos definir os valores do array em variaveis. <br> Nesse caso ele me retornaria no console " Gabriel " </p>
+
     
 
     <hr>
@@ -233,5 +265,51 @@
 
     <p>Copia exatamente o mesmo Objeto</p>
     <p>Conferir em uDemy > objeto > propriedades > mutacao</p>
+
+    <h3>Destructuring com Objetos</h3>
+
+    <p><code>let obj = { <br>
+    nome: "Gabriel", <br>
+    idade: 21, <br>
+    sobrenome: "Nunes" } <br>
+    <br>
+    const {nome: vNome, idade: vIdade} = obj <br> <br>
+    </code>Pode definir variaveis com as propriedades do objeto. <br> Nesse caso eu poderia ler no console o " vNome " e ele me retornaria o nome do objeto (no caso do objeto " obj ")</p>
+
+
+    <hr>
+
+
+    <h2>JSON</h2>
+
+    <p>JSON = JavaScript Object Notation</p>
+    <p>Utilizado para comunicação entre servidores, ex: back end <-> front end</p>
+    <p>Basicamente um tipo de dado padronizado, que lembra muito um objeto do JavaScript</p>
+    <p>Exemplo: <br><code>
+        {
+            "name": "Gabriel", <br>
+            "age": 21, <br>
+            "position": "Developer", <br>
+            "languages": ["PHP", "JavaScript", "Python"] <br>
+
+        }
+    </code></p>
+    <p>Precisa seguir rigorosamente o padrão do JSON</p>
+    <p>Apenas aspas duplas (exceto em Number)</p>
+    <p>Não aceita comentarios</p>
+
+    <h3>Converter de JSON para String</h3>
+
+    <p><code>let pessoa = { <br>
+        "nome": "Gabriel", <br>
+        "idade": 21, <br>
+        "profissao": "programador"
+    } <br> <br>
+    
+    let pessoaTexto = JSON.stringify(pessoa)</code> Aqui converte de JSON para String</p>
+
+    <p><code>let pessoaJSON = JSON.parse(pessoaTexto)</code>Aqui converte de String para JSON</p>
+
+
 </body>
 </html>
