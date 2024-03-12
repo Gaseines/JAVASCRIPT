@@ -18,10 +18,5 @@ console.log(calculadora.soma(10,5))
 console.log(calculadora.subtrair(10,5))
 console.log(calculadora.multiplicar(10,5))
 console.log(calculadora.dividir(12,5))
+console.log("------------------------------------------")
 
-
-let array = [10,20,30,40,50]
-
-let max = Math.max(array)
-
-console.log(max)

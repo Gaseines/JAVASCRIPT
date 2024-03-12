@@ -318,5 +318,101 @@
     <p><code>let pessoaJSON = JSON.parse(pessoaTexto)</code>Aqui converte de String para JSON</p>
 
 
+
+    <hr>
+
+
+
+    <h2>Orientação a Objetos</h2>
+
+    <h3>Métodos</h3>
+
+    <p>Porpriedades que servem como funções, ou seja, as ações dos objetos. <br> <br>
+    Invocam os métodos da mesma maneira que funções</p>
+
+    <p><code>const cachorro = { <br>
+        raca: 'SRD', <br>
+        latir: function(){ <br>
+            console.log("Au Au") <br>
+        }, <br>
+        uivar: function(){ <br>
+            console.log("auuuuu") <br>
+        }, <br>
+     
+     <br>
+    
+    }
+     <br>
+    
+    cachorro.latir() <br></code>
+    <p>Retorna Au Au</p>
+    <code> cachorro.uivar() <br> </code> <br>
+    Retorna auuuuu</p>
+
+    <p>+ em uDemy > orientação a objetos > maisMetodos</p> <BR></BR>
+
+    <h3>Prototypes</h3>
+    <p>Quando um objeto recebe uma requisição de uma propriedade que ele não tem, ela é procurada no <b>Prototype</b> deste objeto. <br> <br>
+    O prototype de um objeto criado do zero é o Object, que tem os métodos nativos da linguagem</p>
+    <p>Se um objeto for criado dentro de um ja existende, o prototype do segundo objeto será o primeiro</p> <BR></BR>
+
+    <h3>Classes</h3>
+
+    <p>As classes são a mesma coisa que objetos mas com outros objetos dentro</p>
+    <p>Em outras linguagens um Class é um molde de um objeto</p>
+    <p>Podemos criar diversos objetos em cima da Classe</p> <BR></BR>
+
+    <h3>Instanciando Classes por função (Constructor)</h3>
+    <p><b>"COMUM NO JAVASCRIPT"</b></p>
+    <p>Construtores são formas de instanciar uma classe em uma linguagem de programção</p>
+    <p>Instanciar = criar um objeto</p>
+    <p>No Constructor ja podemos definir propriedades</p>
+    <p><code>function criarCarro(rodas, portas, marca){ <br>
+        let carro = Object.create({}) <br>
+        carro.rodas = rodas <br>
+        carro.portas = portas <br>
+        carro.marca = marca <br>
+        carro.acelerar = function(){ <br>
+            console.log("Vruuuummm") <br>
+        } <br>
+        return carro <br>
+    } <br>
+     <br>
+    let hondaCivic = criarCarro(4, 2, 'Honda')</code></p> <br>
+
+    <h3>Constructor por new</h3>
+    <p>Em muitas linguagens podemos instanciar um objeto com new, no JS tambem</p>
+    <p><code>function Pessoa(nome, idade, sexo){ <br>
+        this.nome = nome <br>
+        this.idade = idade <br>
+        this.sexo = sexo <br>
+        this.saudacao = function(){ <br>
+            console.log(`Olá meu nome é ${nome}`) <br>
+        } <br>
+    } <br>
+    <br>
+    
+    let gabriel = new Pessoa("Gabriel", 21, 'M')</code></p> <br>
+
+    <h3>Constructor com Método</h3>
+    <p>Além de propriedades, podemos criar a classe base ja com métodos</p>
+    <p>Basta definir ao prototype o método desejadp</p>
+    <p>da mesma forma que o anteriror mas a function foi criada fora</p>
+    <p><code>function Pessoa(nome, idade, sexo){ <br>
+        this.nome = nome <br>
+        this.idade = idade <br>
+        this.sexo = sexo <br>
+        
+    } <br>
+     <br>
+    Pessoa.prototype.saudacao = function(){ <br>
+        console.log(`Olá meu nome é ${this.nome}`) <br>
+    } <br>
+     <br>
+    
+    let gabriel = new Pessoa("Gabriel", 21, 'M') <br></code></p>
+    
+
+
 </body>
 </html>
