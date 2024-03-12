@@ -411,6 +411,37 @@
      <br>
     
     let gabriel = new Pessoa("Gabriel", 21, 'M') <br></code></p>
+
+    <h3>Constructor na Classe (ES6)</h3>
+
+    <p>Não precisa mais criar uma classe por meio de uma função, agora podemos usar direto o <b>class</b> com um construtor</p>
+    <p><code>class Cachorro { <br>
+        constructor(raca, patas, cor){ <br>
+            this.raca = raca <br>
+            this.patas = patas <br>
+            this.cor = cor <br>
+        } <br>
+    } <br>
+     <br>
+    let labrador = new Cachorro('Labrador', 4, 'Cinza') <br>
+    </code></p>
+
+    <p>Não podem adicionar propriedades direto na classe, só via prototype</p>
+    <p>A classe só aceita metodos</p>
+    <p><code>class Cachorro { <br>
+        constructor(raca, cor){ <br>
+            this.raca = raca <br>
+            this.cor = cor <br>
+        } <br>
+     <br>
+        latir(){ <br>
+            console.log("Au Au") <br>
+        } <br>
+    } <br>
+     <br>
+    Cachorro.prototype.patas = 4 <br>
+     <br>
+    let labrador = new Cachorro('Labrador', 'Cinza') <br></code></p>
     
 
 
