@@ -442,6 +442,86 @@
     Cachorro.prototype.patas = 4 <br>
      <br>
     let labrador = new Cachorro('Labrador', 'Cinza') <br></code></p>
+
+    <h3>Symbols</h3>
+
+    <p>Propriedades únicas, que não podem ser alteradas e nem criadas duas vezes</p>
+    <p>Podemos utilizar como uma <b>const</b>, só que para a propriedade de um objeto</p>
+    <p><code>class Cachorro { <br>
+        constructor(raca, cor){ <br>
+            this.raca = raca <br>
+            this.cor = cor <br>
+        } <br>
+     <br>
+        latir(){ <br>
+            console.log("Au Au") <br>
+        } <br>
+    } <br>
+     <br>
+    let patas = Symbol() <br>
+     <br>
+    Cachorro.prototype[patas] = 4 <br>
+     <br>
+    let labrador = new Cachorro('Labrador', 'Cinza') <br>
+     <br>
+    console.log(Cachorro.prototype[patas]) <br>
+    console.log(labrador[patas]) <br></code></p>
+    <p>Acessa essa propriedade através de Colchetes (como mostrado acima)</p>
+
+    <h3>Getters e Setters</h3>
+    <p><b>Get</b>: serve para resgatar um valor de um propriedade</p>
+    <p><b>Set</b>: serve para alterar o valor de uma propriedade</p>
+
+    <p><code>class Cachorro { <br>
+        constructor(raca, cor){ <br>
+            this.raca = raca <br>
+            this.cor = cor <br>
+        } <br>
+     <br>
+        latir(){ <br>
+            console.log("Au Au") <br>
+        } <br>
+     <br>
+        get verRaca(){ <br>
+            return this.raca <br>
+        } <br>
+     <br>
+        set criarRaca(raca){ <br>
+            this.raca = raca <br>
+        } <br>
+    } <br>
+     <br>
+    let caramelo = new Cachorro('SRD', 'Marrom') <br>
+     <br>
+    console.log(caramelo) <br>
+     <br>
+    caramelo.criarRaca = "Caramelo" <br>
+     <br>
+    console.log(caramelo.verRaca) <br></code></p>
+
+    <h3>Herança</h3>
+    <p>Uma classe pode herdar propriedades de outra classe por herança</p>
+    <p>Para isso utilizamos <b>extends</b></p>
+    <p>E dentro do constructor usamos <b>super</b></p>
+    <p><code>class Mamifero { <br>
+        constructor(patas){ <br>
+            this.patas = patas <br>
+        } <br>
+    } <br>
+     <br>
+    class Cachorro extends Mamifero { <br>
+        constructor(raca, patas){ <br>
+            super(patas) <br>
+            this.raca = raca <br>
+        } <br>
+    } <br>
+     <br>
+    let labrador = new Cachorro('Labrador', 4) <br>
+     <br>
+    console.log(labrador) <br>
+    </code> Retorna as patas da classe pai que nesse caso é o <b>Mamifero</b></p>
+    <p><b>instanceof</b></p>
+    <p>Basicamente a mesma coisa que o typeOf, mas para saber se uma classe é pai da outra <code>console.log(new Cahorro instanceof Mamifero)</code> Com isso retornara <b>true</b> se o <b>Cahorro</b> for uma classe filha de <b>Mamifero</b></p>
     
 
 

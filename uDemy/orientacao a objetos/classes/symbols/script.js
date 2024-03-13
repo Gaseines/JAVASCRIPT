@@ -10,13 +10,13 @@ class Cachorro {
 }
 
 Cachorro.prototype.raca = "SRD" //Valor definido para o prtotype pai
-Cachorro.prototype.patas = 4
+let patas = Symbol()
+
+Cachorro.prototype[patas] = 4
 
 let labrador = new Cachorro('Labrador', 'Cinza')
 
-labrador.latir()
+console.log(Cachorro.prototype[patas])
+console.log(labrador[patas])
 
-console.log(labrador)
 
-console.log(Cachorro.prototype.raca)
-console.log(labrador.raca)
