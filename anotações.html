@@ -13,6 +13,27 @@
         <button id="black" onclick="modoEscuro()">Modo escuro</button>
         <button id="white" onclick="modoClaro()">Modo claro</button>
     </div>
+    <div class="menu">
+        <h1>Opções </h1>
+        <div class="select">
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+            <p><input type="checkbox" name="" id=""></p>
+
+        </div>
+    </div>
     <h1>Anotações</h1>
 
     <h2>ERROS</h2>
@@ -583,6 +604,26 @@
       }</code></p> <br>
 
       <hr>
+
+      <h2>Expressões Regulares</h2>
+
+      <p>Uma forma de encontrar padrões em uma string, por exemplo: validar se só tem números. <br>
+        Em vez de criarmos funções complexas, podemos encontrar dados em texto por meio das expressões regulares <br> <br>
+        Tambem chamdas de regex</p> 
+
+        <h3>Criando uma expressão regular</h3>
+
+        <p><code>let rwg1 = new RegExp("test") <br>
+                let reg2 = /test/</code></p>
+
+        <h3>Verificando padrões com regex</h3>
+
+        <p>Depois da definição do padrão por meio da regex, utilizamos o método test() para verificar se o padrão é retornado. <br>
+        Com isso vamos receber a resposta em true ou false</p>
+
+        <p><code>let test1 = new RegExp('bola') <br> <br>
+                test1.test("dsajkdsboladsadsa") </code> Retornaria true</p>
+                <p><code>test1.test("dsaadsa")</code> Retornaria false</p>
 
       
 
