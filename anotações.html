@@ -15,6 +15,10 @@
     </div>
     <h1>Anotações</h1>
 
+    <h2>ERROS</h2>
+
+    <p>Para aparecer erros no console, digite "use strict" mo inicio no javascript</p>
+
     <h2>Números</h2>
 
     <h3>Converter para Número</h3>
@@ -528,6 +532,59 @@
     <p><b>instanceof</b></p>
     <p>Basicamente a mesma coisa que o typeOf, mas para saber se uma classe é pai da outra <code>console.log(new Cahorro instanceof Mamifero)</code> Com isso retornara <b>true</b> se o <b>Cahorro</b> for uma classe filha de <b>Mamifero</b></p>
     
+    <hr>
+
+    <h2>DEBUG</h2>
+
+    <h3>console.log()</h3>
+
+    <p>O console.log() é uma ferramenta de depuração eficaz em JavaScript por ser direto, fácil de usar, e não requer ferramentas adicionais. Permite visualizar rapidamente valores de variáveis e fluxo de execução, facilitando a identificação e correção de erros. Embora simples, é poderoso para entender o comportamento do código e resolver problemas lógicos.</p> <br>
+
+    <h3>debugger</h3>
+
+    <p>O debugger em JavaScript cria pontos de interrupção no código, permitindo inspecionar variáveis e fluxo de execução em tempo real, facilitando a identificação de bugs.</p><br>
+
+    <h3>Tratamento de input por função</h3>
+
+    <p>Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do softwar, devemos tratar eles. Como por exemplo validando por uma função se o dado está correto ou não</p><br>
+
+    <h3>Exception</h3>
+
+    <p>"Debug exception" refere-se a uma situação durante a depuração de um programa quando uma exceção é lançada, ou seja, um erro ocorre, e o fluxo normal do programa é interrompido. Ferramentas de depuração podem ser configuradas para pausar a execução automaticamente nesse momento, permitindo ao desenvolvedor inspecionar o estado do programa. Isso facilita a identificação da causa do problema.</p>
+    <p><code>function dividir(a, b) {<br>
+        if (b === 0) {<br>
+          throw new Error("Divisão por zero não é permitida.");<br>
+        }<br>
+        return a / b;
+      }</code></p><br>
+
+      <h3>try-catch</h3>
+
+      <p>O try-catch é um mecanismo em JavaScript para tratar erros. O bloco try executa o código que pode gerar uma exceção, enquanto o bloco catch é usado para capturar e tratar qualquer erro que ocorra no bloco try. Se um erro é lançado no try, a execução do bloco é interrompida, e o controle é passado ao catch, permitindo uma manipulação elegante do erro.</p>
+
+      <p><code>
+        try{ <br>
+            let a = 2 + b <br>
+        }catch(e){<br>
+            console.log(e) <br>
+        } 
+      </code></p> <br>
+
+      <h3>Assertion</h3>
+
+      <p>Assertion (afirmação) é uma técnica de depuração que verifica se uma condição específica é verdadeira durante a execução de um programa. Se a condição avaliada pela assertion for falsa, o programa normalmente lança um erro ou interrompe a execução. Isso ajuda a detectar bugs precocemente no ciclo de desenvolvimento, assegurando que o estado do programa esteja conforme esperado em pontos críticos.</p>
+
+      <p><code>function somar(a, b) { <br>
+        const resultado = a + b; <br>
+        if (resultado <= a || resultado <= b) { <br>
+          throw new Error("Assertion falhou: o resultado da soma é incorreto."); <br>
+        } <br>
+        return resultado;
+      }</code></p> <br>
+
+      <hr>
+
+      
 
 
 </body>
