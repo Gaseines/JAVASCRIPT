@@ -14,23 +14,25 @@
         <button id="white" onclick="modoClaro()">Modo claro</button>
     </div>
     <div class="menu">
-        <h1>Opções </h1>
+        <h1 class="h1Menu" onclick="abre()">Opções <img src="./down.png"></h1> 
         <div class="select">
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
-            <p><input type="checkbox" name="" id=""></p>
+            <div class="allOpc">
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">ERROS</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Números</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">String</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Operadores</p>
+                <p class=""><input style="cursor: pointer;"  type="checkbox" name="" id="">Árvore DOM</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Condições</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Repetições</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Arrow Function</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Bíblioteca Math</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Array</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Objetos</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">JSON</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Orientação a Objetos</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">DEBUG</p>
+                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Expressões regulares</p>
+            </div>
 
         </div>
     </div>
@@ -605,7 +607,7 @@
 
       <hr>
 
-      <h2>Expressões Regulares</h2>
+      <h2>Expressões Regulares (RegExp)</h2>
 
       <p>Uma forma de encontrar padrões em uma string, por exemplo: validar se só tem números. <br>
         Em vez de criarmos funções complexas, podemos encontrar dados em texto por meio das expressões regulares <br> <br>
@@ -623,8 +625,79 @@
 
         <p><code>let test1 = new RegExp('bola') <br> <br>
                 test1.test("dsajkdsboladsadsa") </code> Retornaria true</p>
-                <p><code>test1.test("dsaadsa")</code> Retornaria false</p>
+                <p><code>test1.test("dsaadsa")</code> Retornaria false</p> <br>
 
+        <h3>Conjuntos</h3>
+
+        <p>Podemos definir um conjunto de caracteres para encontrar com regex. <br>
+        Basta colocar entre [ ] <br>
+    E com um traço podemos definir um intervalo tambem</p>
+
+    <p><code>
+        const reg = /[0-9]/ <br>
+
+        reg.test("Nessa frase temos 5")
+    </code> Retorna true</p><br>
+
+    <h3>Caracteres Especiais</h3>
+
+    <p>\d - Qualquer dígito de caractere</p>
+    <p>\w - Um caractere alfanumérico</p>
+    <p>\s - Qualquer caractere de espaço em branco</p>
+    <p>\D - Caracteres que não são digitos</p>
+    <p>\W - Caractere não-alfanumérico</p>
+    <p>\S - Caractere que não seja espaço</p>
+    <p>. - Qualquer caractere, menos nova linha</p>
+    <p>Exemplo: <code>const reg = /\d/</code></p> 
+
+    <h3>Operador not</h3>
+
+    <p>Podemos escrever um set que aceitam tudo, menos alguns caracteres com not</p>
+    <p><code>const naoAceitaAeB = /[^ab]/ <br>
+ <br>
+        console.log(naoAceitaAeB.test("a"))
+        </code> False</p>
+        <p><code>console.log(naoAceitaAeB.test("aqui tem a"))</code>True</p>
+
+        <h3>Operador +</h3>
+
+        <p>Quando um + está após alguma expressão, este elemento pode se repetir mais de uma vez</p>
+
+        <p><code>const umNumeroOuMais = /\d+/ <br>
+        <br>
+                console.log(umNumeroOuMais.test("12156165"))</code> True</p>
+                <p><code>console.log(umNumeroOuMais.test(" "))</code> False</p>
+
+        <h3>Operador ?</h3>
+
+            <p>Faz com que o digito seja opicional</p>
+
+        <p><code>const padrao = /Abacaxi\s?\d/ <br>
+        <br>
+                console.log(padrao.test("Prova"))</code>True</p>
+                <p><code>console.log(padrao.test("Prova 1"))</code>True</p>
+                <p><code>console.log(padrao.test("Prova 2"))</code>True</p>
+
+        <h3>Operador de precisão</h3>
+
+        <p>Inserir o número de ocorrencia entre { }</p>
+        <p><code>const telefone = /\d{4,5}-\d{4}/   <br>
+            <br>
+            console.log(telefone.test("4004-5005"))
+            </code> True</p>
+            <p><code>console.log(telefone.test("34004-5005"))</code> True</p>
+            <p><code>
+                console.log(telefone.test("004-5005"))
+                </code> False</p>
+                <p><code>console.log(telefone.test("dsad"))</code> False</p> <br>
+
+        <h3>Método exec</h3>
+
+        <p>O método exec nos retorna um objeto com algumas informações sobre a regex <br> Se nada for encontrado retorna null</p>
+
+        <p><code>const digitos = /\d+/ <br> <br>
+            console.log(digitos.exec("Tem o número 100 aqui"))</code> Retorna um objeto com dados</p>
+            <p><code>console.log(digitos.exec("Tem o número aqui"))</code> Retorna null</p>
       
 
 
