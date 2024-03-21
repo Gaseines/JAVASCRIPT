@@ -32,672 +32,567 @@
                 <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Orientação a Objetos</p>
                 <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">DEBUG</p>
                 <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Expressões regulares</p>
+                
             </div>
 
         </div>
     </div>
     <h1>Anotações</h1>
 
-    <h2>ERROS</h2>
+    <div class="erro">
+        <h2>ERROS</h2>
+        <p>Para aparecer erros no console, digite "use strict" mo inicio no javascript</p>
+    </div>
 
-    <p>Para aparecer erros no console, digite "use strict" mo inicio no javascript</p>
+    <dev>
+        <h2>Números</h2>
+        <h3>Converter para Número</h3>
+        <p> Para números inteiros usar : <code>Number.parseInt(n)</code></p>
+        <p>Para números reais usar: <code>Number.parseFloat(n)</code></p>
+        <p>Modo simplificado usar: <code>Number(n)</code></p>
+        <h3>Formatação de número</h3>
+        <p>Para casas decimais usar: <code>n1.toFixed(2)</code></p><p class="ex">1545.5 <br> > 1545.50</p>
+        <p>Para trocar dados usar: <code>n1.toFixed(2).replace('.', ',')</code></p>
+        <p class="ex">1545.50 <br> >1545,50</p>
+        <p>Para colocar cifrão usar: <code>n1.toLocaleString('pt-BR', {style: 'currency', currency: 'brl' })</code></p>
+        <p class="ex">1545.5 <br> > R$ 1.545,50</p>
+        <hr>
+    </dev>
 
-    <h2>Números</h2>
+    <dev class="string">
+        <h2>String</h2>
+        <h3>Converter para String</h3>
+        <p><code>String(s)</code><br> ou <br> <code>n.toString(s)</code></p>
+        <h3>Quantidade de caracteres</h3>
+        <p><code>s.length</code></p>
+        <h3>MAIÚSCULA</h3>
+        <P><code>s.toUpperCase()</code></P>
+        <h3>minúsculas</h3>
+        <p><code>s.toLowerCase()</code></p>
+        <h3>Concatenação</h3>
+        <p>Para concatenação padrão usa-se ' aspas simples e com +. Exemplo: <br> <code>'Estou aprendendo' + s</code></p>
+        <p>Para o uso de "abreviações" (template string) didita-se com ` crase e ${}. Exemplo: <br> <code>`Estou aprendendo ${s}`</code></p>
+        <h3>Metodos de string</h3> <br>
+        <p><code>let palavra = '      \n   Gabriel      \n' <br>
+        palavra.trim()</code> Retorna "Gabriel" sem os espaços e possiveis erros de digitação</p>
+        <br>
+        <p><code>let str = "55" <br>
+        str.padStart(6, "0")</code> primeira condição é quantas casas a string vai ter antes do valor (no caso seriam 6 casas preenchidas por 0, ficando 000055)</p>
+        <br>
+        <p><code>str.padEnd(6, "0")</code>primeira condição é quantas casas a string vai ter depois do valor (no caso seriam 6 casas preenchidas por 0, ficando 550000)</p>
+        <br>
+        <p><b>--Converte em Array--</b></p>
+        <p><code>let numeros = "5; 7; 8; 9; 2;"</code></p>
+        <p><code>numeros.split(";")</code>Retorna um array com dados baseados no separador que nesse caso é o " ; "( nesse caso retornaria ['5', '7', '8', '9', '2'] )</p>
+        <br>
+        <p><code>let frase = "Testando o método join"</code></p>
+        <p><code>frase.join("--")</code>Vai retornar a string editada, substituindo os divisores(nesse caso os espaços) por " -- ", ficando "Testando--o--método--join"</p>
+        <br>
+        <p><code>let palavra = "Repetir "</code></p>
+        <p><code>palavra.repeat(5)</code> Retorna a string repetindo quantas vezes você declarar, nesse caso 5</p>
+        <br>
+        <hr>
+    </dev>
 
-    <h3>Converter para Número</h3>
-    <p> Para números inteiros usar : <code>Number.parseInt(n)</code></p>
-    <p>Para números reais usar: <code>Number.parseFloat(n)</code></p>
-    <p>Modo simplificado usar: <code>Number(n)</code></p>
+    <dev class="operadores">
+        <h2>Operadores</h2>
+        <h3>Aritiméticos</h3>
+        <p>Soma: + <br> Subtração: - <br> Multiplicação: * <br> Divisão Real: / <br> Divisão Inteira: % <br> Potencia: **</p>
+        <h3>Lógicos</h3>
+        <p>!  negação 1º<br> &&  conjunção 2º<br> ||  disjunção 3º</p>
+        <p><code>idade >= 15 && idade <=17</code> // a idade está entre 15 e 17?</p>
+        <p><code>estado == 'RJ' || estado == 'SP'</code>// o estado é RJ ou SP?</p>
+        <p><code>salário > 1500 && sexo != 'M'</code>// salário é maior que 1500 e é mulher?</p>
+        <h3>Ternários</h3>
+        <p>? <br>e <br> :</p>
+        <p><code>teste ? true : false</code></p>
+        <p>Ex: <br> <code>média >= 7.0 ? "Aprovado" : "Reprovado"</code></p>
+        <hr>
+        <h2>Árvore DOM</h2>
+        <p>Respeitar sempre a hirearquia, começando por <code>window.</code></p>
+        <h3>Selecionando</h3>
+        <p>Por Marca: <br> <code>getElementsByTagName()</code></p>
+        <p>Por ID: <br> <code>getElementById()</code></p>
+        <p>Por Nome: <br> <code>getElementsByName()</code></p>
+        <p>Por Classe: <br> <code>getElementsByClassName()</code></p>
+        <p>Por Seletores:  <br> <code>querySelector(div#id)</code></p>
+        <h2>Eventos DOM</h2>
+        <p>link com todos os eventos: <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank">Link</a></p>
+        <hr>
+    </dev>
 
-    <h3>Formatação de número</h3>
-    <p>Para casas decimais usar: <code>n1.toFixed(2)</code></p><p class="ex">1545.5 <br> > 1545.50</p>
-    <p>Para trocar dados usar: <code>n1.toFixed(2).replace('.', ',')</code></p>
-    <p class="ex">1545.50 <br> >1545,50</p>
-    <p>Para colocar cifrão usar: <code>n1.toLocaleString('pt-BR', {style: 'currency', currency: 'brl' })</code></p>
-    <p class="ex">1545.5 <br> > R$ 1.545,50</p>
-
-    <hr>
-
-    <h2>String</h2>
-
-    <h3>Converter para String</h3>
-    <p><code>String(s)</code><br> ou <br> <code>n.toString(s)</code></p>
-
-    <h3>Quantidade de caracteres</h3>
-    <p><code>s.length</code></p>
-    <h3>MAIÚSCULA</h3>
-    <P><code>s.toUpperCase()</code></P>
-
-    <h3>minúsculas</h3>
-    <p><code>s.toLowerCase()</code></p>
-
-    <h3>Concatenação</h3>
-    <p>Para concatenação padrão usa-se ' aspas simples e com +. Exemplo: <br> <code>'Estou aprendendo' + s</code></p>
-    <p>Para o uso de "abreviações" (template string) didita-se com ` crase e ${}. Exemplo: <br> <code>`Estou aprendendo ${s}`</code></p>
-
-    <h3>Metodos de string</h3> <br>
-    <p><code>let palavra = '      \n   Gabriel      \n' <br>
-    palavra.trim()</code> Retorna "Gabriel" sem os espaços e possiveis erros de digitação</p>
-    <br>
-
-    <p><code>let str = "55" <br>
-    str.padStart(6, "0")</code> primeira condição é quantas casas a string vai ter antes do valor (no caso seriam 6 casas preenchidas por 0, ficando 000055)</p> 
-    <br>
-
-    <p><code>str.padEnd(6, "0")</code>primeira condição é quantas casas a string vai ter depois do valor (no caso seriam 6 casas preenchidas por 0, ficando 550000)</p>
-    <br>
-
-    <p><b>--Converte em Array--</b></p>
-    <p><code>let numeros = "5; 7; 8; 9; 2;"</code></p>
-    <p><code>numeros.split(";")</code>Retorna um array com dados baseados no separador que nesse caso é o " ; "( nesse caso retornaria ['5', '7', '8', '9', '2'] )</p>
-    <br>
-
-    <p><code>let frase = "Testando o método join"</code></p>
-    <p><code>frase.join("--")</code>Vai retornar a string editada, substituindo os divisores(nesse caso os espaços) por " -- ", ficando "Testando--o--método--join"</p>
-    <br>
-
-    <p><code>let palavra = "Repetir "</code></p>
-    <p><code>palavra.repeat(5)</code> Retorna a string repetindo quantas vezes você declarar, nesse caso 5</p>
-    <br>
-
-
-
-    <hr>
-
-    <h2>Operadores</h2>
-
-    <h3>Aritiméticos</h3>
-    <p>Soma: + <br> Subtração: - <br> Multiplicação: * <br> Divisão Real: / <br> Divisão Inteira: % <br> Potencia: **</p>
-
-    <h3>Lógicos</h3>
-    <p>!  negação 1º<br> &&  conjunção 2º<br> ||  disjunção 3º</p>
-    <p><code>idade >= 15 && idade <=17</code> // a idade está entre 15 e 17?</p>
-    <p><code>estado == 'RJ' || estado == 'SP'</code>// o estado é RJ ou SP?</p>
-    <p><code>salário > 1500 && sexo != 'M'</code>// salário é maior que 1500 e é mulher?</p>
-
-    <h3>Ternários</h3>
-    <p>? <br>e <br> :</p>
-    <p><code>teste ? true : false</code></p>
-    <p>Ex: <br> <code>média >= 7.0 ? "Aprovado" : "Reprovado"</code></p>
-
-    <hr>
-
-    <h2>Árvore DOM</h2>
-    <p>Respeitar sempre a hirearquia, começando por <code>window.</code></p>
-
-    <h3>Selecionando</h3>
-    <p>Por Marca: <br> <code>getElementsByTagName()</code></p>
-    <p>Por ID: <br> <code>getElementById()</code></p>
-    <p>Por Nome: <br> <code>getElementsByName()</code></p>
-    <p>Por Classe: <br> <code>getElementsByClassName()</code></p>
-    <p>Por Seletores:  <br> <code>querySelector(div#id)</code></p>
-
-    <h2>Eventos DOM</h2>
-    <p>link com todos os eventos: <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank">Link</a></p>
-
-    <hr>
-
-    <h2>Condições</h2>
-
-    <p>Simples: <br> 
-        <code>if(condição){ <br> <br> }</code></p>
-
-    <p>Composta: <br> 
-        <code>if(condição){ <br> <br> }else{ <br> <br> }</code></p>
-
-    <p>Aninhadas: <br> <code>if(condição 1){ <br> <br> }else{ if(condição 2){ <br> <br> }else{ <br> <br> }<br> }</code></p>
-
-    <p>Múltipla: <br> 
-        <code>switch(expressão){ <br> case valor1: <br> <br> case valor2: <br> <br> case valor3: <br> <br> default: <br> <br> }</code></p>
-
-    <hr>
-
-    <h2>Repetições</h2>
-    <p>Primeiro testa e depois executa: <br> 
-        <code>while(condição){ <br> <br>}</code></p>
-
-    <p>Executa depois faz o teste: <br> 
-        <code>do { <br> <br> } while(condição)</code></p>
-
-    <p>Inicia, testa e incrementa: <br>
-    <code>for(inicio; teste; incremento){ <br><br> }</code></p>
-
-    <hr>
-
-    <h2>Arrow Function</h2>
-    <h3>Normal</h3>
-    <p><code>const RaizQuadrada = (x) => { <br>
-        return x * x
-        <br> }
+    <dev class="condicoes">
+        <h2>Condições</h2>
+        <p>Simples: <br>
+            <code>if(condição){ <br> <br> }</code></p>
+        <p>Composta: <br>
+            <code>if(condição){ <br> <br> }else{ <br> <br> }</code></p>
+        <p>Aninhadas: <br> <code>if(condição 1){ <br> <br> }else{ if(condição 2){ <br> <br> }else{ <br> <br> }<br> }</code></p>
+        <p>Múltipla: <br>
+            <code>switch(expressão){ <br> case valor1: <br> <br> case valor2: <br> <br> case valor3: <br> <br> default: <br> <br> }</code></p>
+        <hr>
+        <h2>Repetições</h2>
+        <p>Primeiro testa e depois executa: <br>
+            <code>while(condição){ <br> <br>}</code></p>
+        <p>Executa depois faz o teste: <br>
+            <code>do { <br> <br> } while(condição)</code></p>
+        <p>Inicia, testa e incrementa: <br>
+        <code>for(inicio; teste; incremento){ <br><br> }</code></p>
+        <hr>
+        <h2>Arrow Function</h2>
+        <h3>Normal</h3>
+        <p><code>const RaizQuadrada = (x) => { <br>
+            return x * x
+            <br> }
+            </code></p>
+        
+        <h3>Simplificado</h3>
+        <p><code>
+            const RaizQuadrada = x => x * x
         </code></p>
         
-    <h3>Simplificado</h3>
-    <p><code>
-        const RaizQuadrada = x => x * x
-    </code></p>   
-    
-    <hr>
-
-    <h2>Biblioteca Math</h2>
-    <p>Funções prontas de Matemática</p>
-
-    <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Link da biblioteca</a></p>
-    
-
-    <hr>
-
-    <h2>Array</h2>
-    <p><code>let arr = [ 1, 4, 7, 5, 12]</code></p>
-    <p><code>let nomes = ['Gabriel', 'Luiza', 'Mariana']</code></p>
-    <p><code>let bool = [true, false]</code></p>
-    <p><code>let Misturado = [1, 'Gabrie', true]</code></p>
-
-    <p>Primeira casa do array sempre será 0</p>
-
-    <h3>Propriedades Array</h3>
-
-    <p><code>let arr = [1,5,3,6,9,7]</code></p>
-    <p><code>console.log(arr.length)</code> Retorna quantidade de itens no array = 6</p>
-    <p><code>console.log(arr[0])</code>Mostra primeiro item do array = 1</p> 
-    <p><code>console.log(arr[arr.length - 1 ]) </code> Mostra o ultimo item do array = 7</p>
-
-    <h3>Metodos Array (Funções)</h3>
-    <p><code>let num = [5, 8, 4, 3, 5]</code></p> <br>
-    <p><code>num [3] = 6</code> Substitui a casa 3</p> <br>
-    <p><code>num.push(7)</code> Adiciona a ultima casa</p> <br>
-    <p><code>num.pop()</code> Remove a ultima casa</p> <br>
-    <p><code>num.unshift(7)</code> Adiciona a primeira casa</p> <br>
-    <p><code>num.shift()</code> Remove a primeira casa</p> <br>
-    <p><code>num.length</code>Tamanho</p> <br>
-    <p><code>num.sort()</code>Organiza em ordem crescente</p> <br>
-    <p><code>num.reverse()</code> Retorna os valores do array só que ao contrario</p> <br>
-    
-    <p><code>num.indexOf(8)</code>Busca um valor específico dentro da variavel (ele retorna o número do índice, nesse caso seria 1)</p> <br>
-    <p><code>num.lastIndexOf(5)</code>Busca o ultimo numero que está na condição (Retorna o número do índice, nesse caso seria 4)</p> <br>
-    <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
-    <p><code>num.slice(2, 3)</code>Retorna um valor específico de dentro do array, na condição se coloca o indice que você quer até o indice posterior do ultimo (Nesse caso retornaria 4)</p>
-    <p>Nesse outro caso <code>num.slice(2)</code> Ele retorna os valores até o ultimo indice do array (retornaria 4, 3, 5) </p>
-    <p>Outros exemplos em uDemy > array > metodos > Slice</p> <br>
-    <p><code>num.forEach(numeros =>{<br>
-        console.log(numeros) <br>
-     })</code> <br> Repetição (estilo for) específico para arrays. No exemplo acima ele retornaria 5, 8, 4, 3, 5</p> <br>
-
-     <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
-
-     <p><code>num.splice(start[, deleteCount[, item1[, item2[, ...]]]])</code>  <br><br><b>start</b>: O índice no array a partir do qual começar a adicionar ou remover elementos. <br> <br>
-        <b>deleteCount (opcional)</b>: O número de elementos a serem removidos a partir de start. Se omitido, todos os elementos a partir de start até o fim do array serão removidos. Se deleteCount é 0 ou negativo, nenhum elemento é removido. <br> <br>
-        <b>item1, item2, ... (opcional)</b>: Os elementos a serem adicionados ao array, começando a partir da posição start. Se não forem fornecidos, splice() apenas removerá elementos.</p> <br>
-
-     <h3>Rest operator</h3>
-
-     <p><code>function imprimirNumeros(...args){ <br>
-         for(let i = 0; i < args.length; i++){<br>
-            console.log(args[i]) 
-         } } <br></code>Uma forma de uma função receber varios parâmetros. <br> O operador Rest vira um array. <br> O parâmetro é definido por: ...nome (nesse caso ...args)</p> <br>
-
-         <h3>Destructuring com Array</h3>
-
-         <p><code>let nomes = ["Gabriel", "Luiza", "Mariana"] <br><br>
-
-            let [nomeA, nomeB, nomeC] = nomes <br><br>
-            
-            console.log(nomeA)</code> <br><br> Podemos definir os valores do array em variaveis. <br> Nesse caso ele me retornaria no console " Gabriel " </p> <br>
-
-            <p><b>--Converte String em Array--</b></p>
-            <p><code>let numeros = "5; 7; 8; 9; 2;"</code></p>
-            <p><code>numeros.split(";")</code>Retorna um array com dados baseados no        separador que nesse caso é o " ; "( nesse caso retornaria ['5', '7', '8', '9', '2'] )</p>
-            <br>
-
-    
-
-    <hr>
-
-
-    <h2>Objetos</h2>
-    <p><code>let amigo = {nome:'José',sexo:'M',peso:75.5,engordar(p){}}</code></p>
-    <p><code>console.log(amigo.nome)</code> Retorna o nome no Objeto</p>
-    <p><code>console.log(amigo.peso)</code> Retorna o peso no Objeto</p>
-
-    <h3>Propriedades</h3>
-
-    <h4>Adiciona e Remove Itens</h4>
-    <p><code>
-        let carro = {
-        marca: "Honda",
-        portas: 4,
-        manual: true,
-        motor: 1.7,
-        velocidade: "Rapido"
-    }</code></p>
-    <p><code>delete carro.velocidade</code> Deleta a informação de "velocidade"</p>
-    <p><code>carro.tetoSolar = false</code> Adiciona a informação de "tetoSolar"</p>
-    <p><code>console.log(carro.tetoSolar)</code> Mostra a informação de "tetoSolar"</p>
-
-    <h4>Copia de um Objeto para outro</h4>
-
-    <p><code>let obj1 = {
-        nome: "Gabriel",
-        idade: 21
-    }</code></p>
-    <p><code>let obj2 = {
-        carro: "Honda Civic"
-    }</code></p>
-    <p><code>Object.assign(obj1, obj2)</code> Copia as propriedades do "obj2" para o "obj1"</p>
-
-    <p>Resultado: <code>let obj1 = {
-        nome: "Gabriel",
-        idade: 21,
-        carro: "Honda Civic"
-    }</code></p>
-
-    <h4>Keys</h4>
-
-    <p><code>let obj = {
-        chave1: 1,
-        chave2: 2,
-        chave3: 3
-    }</code></p>
-    <p><code>console.log(Object.keys(obj))</code> Mostra apenas o nome dos dados do objeto</p>
-
-    <h4>Mutações</h4>
-
-    <p>Copia exatamente o mesmo Objeto</p>
-    <p>Conferir em uDemy > objeto > propriedades > mutacao</p>
-
-    <h3>Destructuring com Objetos</h3>
-
-    <p><code>let obj = { <br>
-    nome: "Gabriel", <br>
-    idade: 21, <br>
-    sobrenome: "Nunes" } <br>
-    <br>
-    const {nome: vNome, idade: vIdade} = obj <br> <br>
-    </code>Pode definir variaveis com as propriedades do objeto. <br> Nesse caso eu poderia ler no console o " vNome " e ele me retornaria o nome do objeto (no caso do objeto " obj ")</p>
-
-
-    <hr>
-
-
-    <h2>JSON</h2>
-
-    <p>JSON = JavaScript Object Notation</p>
-    <p>Utilizado para comunicação entre servidores, ex: back end <-> front end</p>
-    <p>Basicamente um tipo de dado padronizado, que lembra muito um objeto do JavaScript</p>
-    <p>Exemplo: <br><code>
-        {
-            "name": "Gabriel", <br>
-            "age": 21, <br>
-            "position": "Developer", <br>
-            "languages": ["PHP", "JavaScript", "Python"] <br>
-
-        }
-    </code></p>
-    <p>Precisa seguir rigorosamente o padrão do JSON</p>
-    <p>Apenas aspas duplas (exceto em Number)</p>
-    <p>Não aceita comentarios</p>
-    <p>Para acessar os itens do JSON, usa-se a mesma forma do objeto</p>
-
-    <h3>Converter de JSON para String</h3>
-
-    <p><code>let pessoa = { <br>
-        "nome": "Gabriel", <br>
-        "idade": 21, <br>
-        "profissao": "programador"
-    } <br> <br>
-    
-    let pessoaTexto = JSON.stringify(pessoa)</code> Aqui converte de JSON para String</p>
-
-    <p><code>let pessoaJSON = JSON.parse(pessoaTexto)</code>Aqui converte de String para JSON</p>
-
-
-
-    <hr>
-
-
-
-    <h2>Orientação a Objetos</h2>
-
-    <h3>Métodos</h3>
-
-    <p>Porpriedades que servem como funções, ou seja, as ações dos objetos. <br> <br>
-    Invocam os métodos da mesma maneira que funções</p>
-
-    <p><code>const cachorro = { <br>
-        raca: 'SRD', <br>
-        latir: function(){ <br>
-            console.log("Au Au") <br>
-        }, <br>
-        uivar: function(){ <br>
-            console.log("auuuuu") <br>
-        }, <br>
-     
-     <br>
-    
-    }
-     <br>
-    
-    cachorro.latir() <br></code>
-    <p>Retorna Au Au</p>
-    <code> cachorro.uivar() <br> </code> <br>
-    Retorna auuuuu</p>
-
-    <p>+ em uDemy > orientação a objetos > maisMetodos</p> <BR></BR>
-
-    <h3>Prototypes</h3>
-    <p>Quando um objeto recebe uma requisição de uma propriedade que ele não tem, ela é procurada no <b>Prototype</b> deste objeto. <br> <br>
-    O prototype de um objeto criado do zero é o Object, que tem os métodos nativos da linguagem</p>
-    <p>Se um objeto for criado dentro de um ja existende, o prototype do segundo objeto será o primeiro</p> <BR></BR>
-
-    <h3>Classes</h3>
-
-    <p>As classes são a mesma coisa que objetos mas com outros objetos dentro</p>
-    <p>Em outras linguagens um Class é um molde de um objeto</p>
-    <p>Podemos criar diversos objetos em cima da Classe</p> <BR></BR>
-
-    <h3>Instanciando Classes por função (Constructor)</h3>
-    <p><b>"COMUM NO JAVASCRIPT"</b></p>
-    <p>Construtores são formas de instanciar uma classe em uma linguagem de programção</p>
-    <p>Instanciar = criar um objeto</p>
-    <p>No Constructor ja podemos definir propriedades</p>
-    <p><code>function criarCarro(rodas, portas, marca){ <br>
-        let carro = Object.create({}) <br>
-        carro.rodas = rodas <br>
-        carro.portas = portas <br>
-        carro.marca = marca <br>
-        carro.acelerar = function(){ <br>
-            console.log("Vruuuummm") <br>
-        } <br>
-        return carro <br>
-    } <br>
-     <br>
-    let hondaCivic = criarCarro(4, 2, 'Honda')</code></p> <br>
-
-    <h3>Constructor por new</h3>
-    <p>Em muitas linguagens podemos instanciar um objeto com new, no JS tambem</p>
-    <p><code>function Pessoa(nome, idade, sexo){ <br>
-        this.nome = nome <br>
-        this.idade = idade <br>
-        this.sexo = sexo <br>
-        this.saudacao = function(){ <br>
-            console.log(`Olá meu nome é ${nome}`) <br>
-        } <br>
-    } <br>
-    <br>
-    
-    let gabriel = new Pessoa("Gabriel", 21, 'M')</code></p> <br>
-
-    <h3>Constructor com Método</h3>
-    <p>Além de propriedades, podemos criar a classe base ja com métodos</p>
-    <p>Basta definir ao prototype o método desejadp</p>
-    <p>da mesma forma que o anteriror mas a function foi criada fora</p>
-    <p><code>function Pessoa(nome, idade, sexo){ <br>
-        this.nome = nome <br>
-        this.idade = idade <br>
-        this.sexo = sexo <br>
+        <hr>
+        <h2>Biblioteca Math</h2>
+        <p>Funções prontas de Matemática</p>
+        <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Link da biblioteca</a></p>
         
-    } <br>
-     <br>
-    Pessoa.prototype.saudacao = function(){ <br>
-        console.log(`Olá meu nome é ${this.nome}`) <br>
-    } <br>
-     <br>
-    
-    let gabriel = new Pessoa("Gabriel", 21, 'M') <br></code></p>
+        <hr>
+    </dev>
 
-    <h3>Constructor na Classe (ES6)</h3>
+    <dev class="array">
+        <h2>Array</h2>
+        <p><code>let arr = [ 1, 4, 7, 5, 12]</code></p>
+        <p><code>let nomes = ['Gabriel', 'Luiza', 'Mariana']</code></p>
+        <p><code>let bool = [true, false]</code></p>
+        <p><code>let Misturado = [1, 'Gabrie', true]</code></p>
+        <p>Primeira casa do array sempre será 0</p>
+        <h3>Propriedades Array</h3>
+        <p><code>let arr = [1,5,3,6,9,7]</code></p>
+        <p><code>console.log(arr.length)</code> Retorna quantidade de itens no array = 6</p>
+        <p><code>console.log(arr[0])</code>Mostra primeiro item do array = 1</p>
+        <p><code>console.log(arr[arr.length - 1 ]) </code> Mostra o ultimo item do array = 7</p>
+        <h3>Metodos Array (Funções)</h3>
+        <p><code>let num = [5, 8, 4, 3, 5]</code></p> <br>
+        <p><code>num [3] = 6</code> Substitui a casa 3</p> <br>
+        <p><code>num.push(7)</code> Adiciona a ultima casa</p> <br>
+        <p><code>num.pop()</code> Remove a ultima casa</p> <br>
+        <p><code>num.unshift(7)</code> Adiciona a primeira casa</p> <br>
+        <p><code>num.shift()</code> Remove a primeira casa</p> <br>
+        <p><code>num.length</code>Tamanho</p> <br>
+        <p><code>num.sort()</code>Organiza em ordem crescente</p> <br>
+        <p><code>num.reverse()</code> Retorna os valores do array só que ao contrario</p> <br>
+        
+        <p><code>num.indexOf(8)</code>Busca um valor específico dentro da variavel (ele retorna o número do índice, nesse caso seria 1)</p> <br>
+        <p><code>num.lastIndexOf(5)</code>Busca o ultimo numero que está na condição (Retorna o número do índice, nesse caso seria 4)</p> <br>
+        <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
+        <p><code>num.slice(2, 3)</code>Retorna um valor específico de dentro do array, na condição se coloca o indice que você quer até o indice posterior do ultimo (Nesse caso retornaria 4)</p>
+        <p>Nesse outro caso <code>num.slice(2)</code> Ele retorna os valores até o ultimo indice do array (retornaria 4, 3, 5) </p>
+        <p>Outros exemplos em uDemy > array > metodos > Slice</p> <br>
+        <p><code>num.forEach(numeros =>{<br>
+            console.log(numeros) <br>
+         })</code> <br> Repetição (estilo for) específico para arrays. No exemplo acima ele retornaria 5, 8, 4, 3, 5</p> <br>
+         <p><code>num.includes(4)</code> Busca um valor específico dentro do array (Retorna True ou False, nesse caso seria true)</p> <br>
+         <p><code>num.splice(start[, deleteCount[, item1[, item2[, ...]]]])</code>  <br><br><b>start</b>: O índice no array a partir do qual começar a adicionar ou remover elementos. <br> <br>
+            <b>deleteCount (opcional)</b>: O número de elementos a serem removidos a partir de start. Se omitido, todos os elementos a partir de start até o fim do array serão removidos. Se deleteCount é 0 ou negativo, nenhum elemento é removido. <br> <br>
+            <b>item1, item2, ... (opcional)</b>: Os elementos a serem adicionados ao array, começando a partir da posição start. Se não forem fornecidos, splice() apenas removerá elementos.</p> <br>
+         <h3>Rest operator</h3>
+         <p><code>function imprimirNumeros(...args){ <br>
+             for(let i = 0; i < args.length; i++){<br>
+                console.log(args[i])
+             } } <br></code>Uma forma de uma função receber varios parâmetros. <br> O operador Rest vira um array. <br> O parâmetro é definido por: ...nome (nesse caso ...args)</p> <br>
+             <h3>Destructuring com Array</h3>
+             <p><code>let nomes = ["Gabriel", "Luiza", "Mariana"] <br><br>
+                let [nomeA, nomeB, nomeC] = nomes <br><br>
+        
+                console.log(nomeA)</code> <br><br> Podemos definir os valores do array em variaveis. <br> Nesse caso ele me retornaria no console " Gabriel " </p> <br>
+                <p><b>--Converte String em Array--</b></p>
+                <p><code>let numeros = "5; 7; 8; 9; 2;"</code></p>
+                <p><code>numeros.split(";")</code>Retorna um array com dados baseados no        separador que nesse caso é o " ; "( nesse caso retornaria ['5', '7', '8', '9', '2'] )</p>
+                <br>
+        
+        <hr>
+    </dev>
 
-    <p>Não precisa mais criar uma classe por meio de uma função, agora podemos usar direto o <b>class</b> com um construtor</p>
-    <p><code>class Cachorro { <br>
-        constructor(raca, patas, cor){ <br>
-            this.raca = raca <br>
-            this.patas = patas <br>
-            this.cor = cor <br>
-        } <br>
-    } <br>
-     <br>
-    let labrador = new Cachorro('Labrador', 4, 'Cinza') <br>
-    </code></p>
 
-    <p>Não podem adicionar propriedades direto na classe, só via prototype</p>
-    <p>A classe só aceita metodos</p>
-    <p><code>class Cachorro { <br>
-        constructor(raca, cor){ <br>
-            this.raca = raca <br>
-            this.cor = cor <br>
-        } <br>
-     <br>
-        latir(){ <br>
-            console.log("Au Au") <br>
-        } <br>
-    } <br>
-     <br>
-    Cachorro.prototype.patas = 4 <br>
-     <br>
-    let labrador = new Cachorro('Labrador', 'Cinza') <br></code></p>
-
-    <h3>Symbols</h3>
-
-    <p>Propriedades únicas, que não podem ser alteradas e nem criadas duas vezes</p>
-    <p>Podemos utilizar como uma <b>const</b>, só que para a propriedade de um objeto</p>
-    <p><code>class Cachorro { <br>
-        constructor(raca, cor){ <br>
-            this.raca = raca <br>
-            this.cor = cor <br>
-        } <br>
-     <br>
-        latir(){ <br>
-            console.log("Au Au") <br>
-        } <br>
-    } <br>
-     <br>
-    let patas = Symbol() <br>
-     <br>
-    Cachorro.prototype[patas] = 4 <br>
-     <br>
-    let labrador = new Cachorro('Labrador', 'Cinza') <br>
-     <br>
-    console.log(Cachorro.prototype[patas]) <br>
-    console.log(labrador[patas]) <br></code></p>
-    <p>Acessa essa propriedade através de Colchetes (como mostrado acima)</p>
-
-    <h3>Getters e Setters</h3>
-    <p><b>Get</b>: serve para resgatar um valor de um propriedade</p>
-    <p><b>Set</b>: serve para alterar o valor de uma propriedade</p>
-
-    <p><code>class Cachorro { <br>
-        constructor(raca, cor){ <br>
-            this.raca = raca <br>
-            this.cor = cor <br>
-        } <br>
-     <br>
-        latir(){ <br>
-            console.log("Au Au") <br>
-        } <br>
-     <br>
-        get verRaca(){ <br>
-            return this.raca <br>
-        } <br>
-     <br>
-        set criarRaca(raca){ <br>
-            this.raca = raca <br>
-        } <br>
-    } <br>
-     <br>
-    let caramelo = new Cachorro('SRD', 'Marrom') <br>
-     <br>
-    console.log(caramelo) <br>
-     <br>
-    caramelo.criarRaca = "Caramelo" <br>
-     <br>
-    console.log(caramelo.verRaca) <br></code></p>
-
-    <h3>Herança</h3>
-    <p>Uma classe pode herdar propriedades de outra classe por herança</p>
-    <p>Para isso utilizamos <b>extends</b></p>
-    <p>E dentro do constructor usamos <b>super</b></p>
-    <p><code>class Mamifero { <br>
-        constructor(patas){ <br>
-            this.patas = patas <br>
-        } <br>
-    } <br>
-     <br>
-    class Cachorro extends Mamifero { <br>
-        constructor(raca, patas){ <br>
-            super(patas) <br>
-            this.raca = raca <br>
-        } <br>
-    } <br>
-     <br>
-    let labrador = new Cachorro('Labrador', 4) <br>
-     <br>
-    console.log(labrador) <br>
-    </code> Retorna as patas da classe pai que nesse caso é o <b>Mamifero</b></p>
-    <p><b>instanceof</b></p>
-    <p>Basicamente a mesma coisa que o typeOf, mas para saber se uma classe é pai da outra <code>console.log(new Cahorro instanceof Mamifero)</code> Com isso retornara <b>true</b> se o <b>Cahorro</b> for uma classe filha de <b>Mamifero</b></p>
-    
-    <hr>
-
-    <h2>DEBUG</h2>
-
-    <h3>console.log()</h3>
-
-    <p>O console.log() é uma ferramenta de depuração eficaz em JavaScript por ser direto, fácil de usar, e não requer ferramentas adicionais. Permite visualizar rapidamente valores de variáveis e fluxo de execução, facilitando a identificação e correção de erros. Embora simples, é poderoso para entender o comportamento do código e resolver problemas lógicos.</p> <br>
-
-    <h3>debugger</h3>
-
-    <p>O debugger em JavaScript cria pontos de interrupção no código, permitindo inspecionar variáveis e fluxo de execução em tempo real, facilitando a identificação de bugs.</p><br>
-
-    <h3>Tratamento de input por função</h3>
-
-    <p>Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do softwar, devemos tratar eles. Como por exemplo validando por uma função se o dado está correto ou não</p><br>
-
-    <h3>Exception</h3>
-
-    <p>"Debug exception" refere-se a uma situação durante a depuração de um programa quando uma exceção é lançada, ou seja, um erro ocorre, e o fluxo normal do programa é interrompido. Ferramentas de depuração podem ser configuradas para pausar a execução automaticamente nesse momento, permitindo ao desenvolvedor inspecionar o estado do programa. Isso facilita a identificação da causa do problema.</p>
-    <p><code>function dividir(a, b) {<br>
-        if (b === 0) {<br>
-          throw new Error("Divisão por zero não é permitida.");<br>
-        }<br>
-        return a / b;
-      }</code></p><br>
-
-      <h3>try-catch</h3>
-
-      <p>O try-catch é um mecanismo em JavaScript para tratar erros. O bloco try executa o código que pode gerar uma exceção, enquanto o bloco catch é usado para capturar e tratar qualquer erro que ocorra no bloco try. Se um erro é lançado no try, a execução do bloco é interrompida, e o controle é passado ao catch, permitindo uma manipulação elegante do erro.</p>
-
-      <p><code>
-        try{ <br>
-            let a = 2 + b <br>
-        }catch(e){<br>
-            console.log(e) <br>
-        } 
-      </code></p> <br>
-
-      <h3>Assertion</h3>
-
-      <p>Assertion (afirmação) é uma técnica de depuração que verifica se uma condição específica é verdadeira durante a execução de um programa. Se a condição avaliada pela assertion for falsa, o programa normalmente lança um erro ou interrompe a execução. Isso ajuda a detectar bugs precocemente no ciclo de desenvolvimento, assegurando que o estado do programa esteja conforme esperado em pontos críticos.</p>
-
-      <p><code>function somar(a, b) { <br>
-        const resultado = a + b; <br>
-        if (resultado <= a || resultado <= b) { <br>
-          throw new Error("Assertion falhou: o resultado da soma é incorreto."); <br>
-        } <br>
-        return resultado;
-      }</code></p> <br>
-
-      <hr>
-
-      <h2>Expressões Regulares (RegExp)</h2>
-
-      <p>Uma forma de encontrar padrões em uma string, por exemplo: validar se só tem números. <br>
-        Em vez de criarmos funções complexas, podemos encontrar dados em texto por meio das expressões regulares <br> <br>
-        Tambem chamdas de regex</p> 
-
-        <h3>Criando uma expressão regular</h3>
-
-        <p><code>let rwg1 = new RegExp("test") <br>
-                let reg2 = /test/</code></p>
-
-        <h3>Verificando padrões com regex</h3>
-
-        <p>Depois da definição do padrão por meio da regex, utilizamos o método test() para verificar se o padrão é retornado. <br>
-        Com isso vamos receber a resposta em true ou false</p>
-
-        <p><code>let test1 = new RegExp('bola') <br> <br>
-                test1.test("dsajkdsboladsadsa") </code> Retornaria true</p>
-                <p><code>test1.test("dsaadsa")</code> Retornaria false</p> <br>
-
-        <h3>Conjuntos</h3>
-
-        <p>Podemos definir um conjunto de caracteres para encontrar com regex. <br>
-        Basta colocar entre [ ] <br>
-    E com um traço podemos definir um intervalo tambem</p>
-
-    <p><code>
-        const reg = /[0-9]/ <br>
-
-        reg.test("Nessa frase temos 5")
-    </code> Retorna true</p><br>
-
-    <h3>Caracteres Especiais</h3>
-
-    <p>\d - Qualquer dígito de caractere</p>
-    <p>\w - Um caractere alfanumérico</p>
-    <p>\s - Qualquer caractere de espaço em branco</p>
-    <p>\D - Caracteres que não são digitos</p>
-    <p>\W - Caractere não-alfanumérico</p>
-    <p>\S - Caractere que não seja espaço</p>
-    <p>. - Qualquer caractere, menos nova linha</p>
-    <p>Exemplo: <code>const reg = /\d/</code></p> 
-
-    <h3>Operador not</h3>
-
-    <p>Podemos escrever um set que aceitam tudo, menos alguns caracteres com not</p>
-    <p><code>const naoAceitaAeB = /[^ab]/ <br>
- <br>
-        console.log(naoAceitaAeB.test("a"))
-        </code> False</p>
-        <p><code>console.log(naoAceitaAeB.test("aqui tem a"))</code>True</p>
-
-        <h3>Operador +</h3>
-
-        <p>Quando um + está após alguma expressão, este elemento pode se repetir mais de uma vez</p>
-
-        <p><code>const umNumeroOuMais = /\d+/ <br>
+    <dev class="objetos">
+        <h2>Objetos</h2>
+        <p><code>let amigo = {nome:'José',sexo:'M',peso:75.5,engordar(p){}}</code></p>
+        <p><code>console.log(amigo.nome)</code> Retorna o nome no Objeto</p>
+        <p><code>console.log(amigo.peso)</code> Retorna o peso no Objeto</p>
+        <h3>Propriedades</h3>
+        <h4>Adiciona e Remove Itens</h4>
+        <p><code>
+            let carro = {
+            marca: "Honda",
+            portas: 4,
+            manual: true,
+            motor: 1.7,
+            velocidade: "Rapido"
+        }</code></p>
+        <p><code>delete carro.velocidade</code> Deleta a informação de "velocidade"</p>
+        <p><code>carro.tetoSolar = false</code> Adiciona a informação de "tetoSolar"</p>
+        <p><code>console.log(carro.tetoSolar)</code> Mostra a informação de "tetoSolar"</p>
+        <h4>Copia de um Objeto para outro</h4>
+        <p><code>let obj1 = {
+            nome: "Gabriel",
+            idade: 21
+        }</code></p>
+        <p><code>let obj2 = {
+            carro: "Honda Civic"
+        }</code></p>
+        <p><code>Object.assign(obj1, obj2)</code> Copia as propriedades do "obj2" para o "obj1"</p>
+        <p>Resultado: <code>let obj1 = {
+            nome: "Gabriel",
+            idade: 21,
+            carro: "Honda Civic"
+        }</code></p>
+        <h4>Keys</h4>
+        <p><code>let obj = {
+            chave1: 1,
+            chave2: 2,
+            chave3: 3
+        }</code></p>
+        <p><code>console.log(Object.keys(obj))</code> Mostra apenas o nome dos dados do objeto</p>
+        <h4>Mutações</h4>
+        <p>Copia exatamente o mesmo Objeto</p>
+        <p>Conferir em uDemy > objeto > propriedades > mutacao</p>
+        <h3>Destructuring com Objetos</h3>
+        <p><code>let obj = { <br>
+        nome: "Gabriel", <br>
+        idade: 21, <br>
+        sobrenome: "Nunes" } <br>
         <br>
-                console.log(umNumeroOuMais.test("12156165"))</code> True</p>
-                <p><code>console.log(umNumeroOuMais.test(" "))</code> False</p>
+        const {nome: vNome, idade: vIdade} = obj <br> <br>
+        </code>Pode definir variaveis com as propriedades do objeto. <br> Nesse caso eu poderia ler no console o " vNome " e ele me retornaria o nome do objeto (no caso do objeto " obj ")</p>
+        <hr>
+        <h2>JSON</h2>
+        <p>JSON = JavaScript Object Notation</p>
+        <p>Utilizado para comunicação entre servidores, ex: back end <-> front end</p>
+        <p>Basicamente um tipo de dado padronizado, que lembra muito um objeto do JavaScript</p>
+        <p>Exemplo: <br><code>
+            {
+                "name": "Gabriel", <br>
+                "age": 21, <br>
+                "position": "Developer", <br>
+                "languages": ["PHP", "JavaScript", "Python"] <br>
+            }
+        </code></p>
+        <p>Precisa seguir rigorosamente o padrão do JSON</p>
+        <p>Apenas aspas duplas (exceto em Number)</p>
+        <p>Não aceita comentarios</p>
+        <p>Para acessar os itens do JSON, usa-se a mesma forma do objeto</p>
+        <h3>Converter de JSON para String</h3>
+        <p><code>let pessoa = { <br>
+            "nome": "Gabriel", <br>
+            "idade": 21, <br>
+            "profissao": "programador"
+        } <br> <br>
+        
+        let pessoaTexto = JSON.stringify(pessoa)</code> Aqui converte de JSON para String</p>
+        <p><code>let pessoaJSON = JSON.parse(pessoaTexto)</code>Aqui converte de String para JSON</p>
+        <hr>
+    </dev>
 
-        <h3>Operador ?</h3>
 
-            <p>Faz com que o digito seja opicional</p>
 
-        <p><code>const padrao = /Abacaxi\s?\d/ <br>
+    <div class="orientacaoObj">
+        <h2>Orientação a Objetos</h2>
+        <h3>Métodos</h3>
+        <p>Porpriedades que servem como funções, ou seja, as ações dos objetos. <br> <br>
+        Invocam os métodos da mesma maneira que funções</p>
+        <p><code>const cachorro = { <br>
+            raca: 'SRD', <br>
+            latir: function(){ <br>
+                console.log("Au Au") <br>
+            }, <br>
+            uivar: function(){ <br>
+                console.log("auuuuu") <br>
+            }, <br>
+        
+         <br>
+        
+        }
+         <br>
+        
+        cachorro.latir() <br></code>
+        <p>Retorna Au Au</p>
+        <code> cachorro.uivar() <br> </code> <br>
+        Retorna auuuuu</p>
+        <p>+ em uDemy > orientação a objetos > maisMetodos</p> <BR></BR>
+        <h3>Prototypes</h3>
+        <p>Quando um objeto recebe uma requisição de uma propriedade que ele não tem, ela é procurada no <b>Prototype</b> deste objeto. <br> <br>
+        O prototype de um objeto criado do zero é o Object, que tem os métodos nativos da linguagem</p>
+        <p>Se um objeto for criado dentro de um ja existende, o prototype do segundo objeto será o primeiro</p> <BR></BR>
+        <h3>Classes</h3>
+        <p>As classes são a mesma coisa que objetos mas com outros objetos dentro</p>
+        <p>Em outras linguagens um Class é um molde de um objeto</p>
+        <p>Podemos criar diversos objetos em cima da Classe</p> <BR></BR>
+        <h3>Instanciando Classes por função (Constructor)</h3>
+        <p><b>"COMUM NO JAVASCRIPT"</b></p>
+        <p>Construtores são formas de instanciar uma classe em uma linguagem de programção</p>
+        <p>Instanciar = criar um objeto</p>
+        <p>No Constructor ja podemos definir propriedades</p>
+        <p><code>function criarCarro(rodas, portas, marca){ <br>
+            let carro = Object.create({}) <br>
+            carro.rodas = rodas <br>
+            carro.portas = portas <br>
+            carro.marca = marca <br>
+            carro.acelerar = function(){ <br>
+                console.log("Vruuuummm") <br>
+            } <br>
+            return carro <br>
+        } <br>
+         <br>
+        let hondaCivic = criarCarro(4, 2, 'Honda')</code></p> <br>
+        <h3>Constructor por new</h3>
+        <p>Em muitas linguagens podemos instanciar um objeto com new, no JS tambem</p>
+        <p><code>function Pessoa(nome, idade, sexo){ <br>
+            this.nome = nome <br>
+            this.idade = idade <br>
+            this.sexo = sexo <br>
+            this.saudacao = function(){ <br>
+                console.log(`Olá meu nome é ${nome}`) <br>
+            } <br>
+        } <br>
         <br>
-                console.log(padrao.test("Prova"))</code>True</p>
-                <p><code>console.log(padrao.test("Prova 1"))</code>True</p>
-                <p><code>console.log(padrao.test("Prova 2"))</code>True</p>
+        
+        let gabriel = new Pessoa("Gabriel", 21, 'M')</code></p> <br>
+        <h3>Constructor com Método</h3>
+        <p>Além de propriedades, podemos criar a classe base ja com métodos</p>
+        <p>Basta definir ao prototype o método desejadp</p>
+        <p>da mesma forma que o anteriror mas a function foi criada fora</p>
+        <p><code>function Pessoa(nome, idade, sexo){ <br>
+            this.nome = nome <br>
+            this.idade = idade <br>
+            this.sexo = sexo <br>
+        
+        } <br>
+         <br>
+        Pessoa.prototype.saudacao = function(){ <br>
+            console.log(`Olá meu nome é ${this.nome}`) <br>
+        } <br>
+         <br>
+        
+        let gabriel = new Pessoa("Gabriel", 21, 'M') <br></code></p>
+        <h3>Constructor na Classe (ES6)</h3>
+        <p>Não precisa mais criar uma classe por meio de uma função, agora podemos usar direto o <b>class</b> com um construtor</p>
+        <p><code>class Cachorro { <br>
+            constructor(raca, patas, cor){ <br>
+                this.raca = raca <br>
+                this.patas = patas <br>
+                this.cor = cor <br>
+            } <br>
+        } <br>
+         <br>
+        let labrador = new Cachorro('Labrador', 4, 'Cinza') <br>
+        </code></p>
+        <p>Não podem adicionar propriedades direto na classe, só via prototype</p>
+        <p>A classe só aceita metodos</p>
+        <p><code>class Cachorro { <br>
+            constructor(raca, cor){ <br>
+                this.raca = raca <br>
+                this.cor = cor <br>
+            } <br>
+         <br>
+            latir(){ <br>
+                console.log("Au Au") <br>
+            } <br>
+        } <br>
+         <br>
+        Cachorro.prototype.patas = 4 <br>
+         <br>
+        let labrador = new Cachorro('Labrador', 'Cinza') <br></code></p>
+        <h3>Symbols</h3>
+        <p>Propriedades únicas, que não podem ser alteradas e nem criadas duas vezes</p>
+        <p>Podemos utilizar como uma <b>const</b>, só que para a propriedade de um objeto</p>
+        <p><code>class Cachorro { <br>
+            constructor(raca, cor){ <br>
+                this.raca = raca <br>
+                this.cor = cor <br>
+            } <br>
+         <br>
+            latir(){ <br>
+                console.log("Au Au") <br>
+            } <br>
+        } <br>
+         <br>
+        let patas = Symbol() <br>
+         <br>
+        Cachorro.prototype[patas] = 4 <br>
+         <br>
+        let labrador = new Cachorro('Labrador', 'Cinza') <br>
+         <br>
+        console.log(Cachorro.prototype[patas]) <br>
+        console.log(labrador[patas]) <br></code></p>
+        <p>Acessa essa propriedade através de Colchetes (como mostrado acima)</p>
+        <h3>Getters e Setters</h3>
+        <p><b>Get</b>: serve para resgatar um valor de um propriedade</p>
+        <p><b>Set</b>: serve para alterar o valor de uma propriedade</p>
+        <p><code>class Cachorro { <br>
+            constructor(raca, cor){ <br>
+                this.raca = raca <br>
+                this.cor = cor <br>
+            } <br>
+         <br>
+            latir(){ <br>
+                console.log("Au Au") <br>
+            } <br>
+         <br>
+            get verRaca(){ <br>
+                return this.raca <br>
+            } <br>
+         <br>
+            set criarRaca(raca){ <br>
+                this.raca = raca <br>
+            } <br>
+        } <br>
+         <br>
+        let caramelo = new Cachorro('SRD', 'Marrom') <br>
+         <br>
+        console.log(caramelo) <br>
+         <br>
+        caramelo.criarRaca = "Caramelo" <br>
+         <br>
+        console.log(caramelo.verRaca) <br></code></p>
+        <h3>Herança</h3>
+        <p>Uma classe pode herdar propriedades de outra classe por herança</p>
+        <p>Para isso utilizamos <b>extends</b></p>
+        <p>E dentro do constructor usamos <b>super</b></p>
+        <p><code>class Mamifero { <br>
+            constructor(patas){ <br>
+                this.patas = patas <br>
+            } <br>
+        } <br>
+         <br>
+        class Cachorro extends Mamifero { <br>
+            constructor(raca, patas){ <br>
+                super(patas) <br>
+                this.raca = raca <br>
+            } <br>
+        } <br>
+         <br>
+        let labrador = new Cachorro('Labrador', 4) <br>
+         <br>
+        console.log(labrador) <br>
+        </code> Retorna as patas da classe pai que nesse caso é o <b>Mamifero</b></p>
+        <p><b>instanceof</b></p>
+        <p>Basicamente a mesma coisa que o typeOf, mas para saber se uma classe é pai da outra <code>console.log(new Cahorro instanceof Mamifero)</code> Com isso retornara <b>true</b> se o <b>Cahorro</b> for uma classe filha de <b>Mamifero</b></p>
+        
+        <hr>
+    </div>
 
-        <h3>Operador de precisão</h3>
+    <dev class="debug">
+        <h2>DEBUG</h2>
+        <h3>console.log()</h3>
+        <p>O console.log() é uma ferramenta de depuração eficaz em JavaScript por ser direto, fácil de usar, e não requer ferramentas adicionais. Permite visualizar rapidamente valores de variáveis e fluxo de execução, facilitando a identificação e correção de erros. Embora simples, é poderoso para entender o comportamento do código e resolver problemas lógicos.</p> <br>
+        <h3>debugger</h3>
+        <p>O debugger em JavaScript cria pontos de interrupção no código, permitindo inspecionar variáveis e fluxo de execução em tempo real, facilitando a identificação de bugs.</p><br>
+        <h3>Tratamento de input por função</h3>
+        <p>Não podemos controlar os dados que o usuário enviar, então para o bom funcionamento do softwar, devemos tratar eles. Como por exemplo validando por uma função se o dado está correto ou não</p><br>
+        <h3>Exception</h3>
+        <p>"Debug exception" refere-se a uma situação durante a depuração de um programa quando uma exceção é lançada, ou seja, um erro ocorre, e o fluxo normal do programa é interrompido. Ferramentas de depuração podem ser configuradas para pausar a execução automaticamente nesse momento, permitindo ao desenvolvedor inspecionar o estado do programa. Isso facilita a identificação da causa do problema.</p>
+        <p><code>function dividir(a, b) {<br>
+            if (b === 0) {<br>
+              throw new Error("Divisão por zero não é permitida.");<br>
+            }<br>
+            return a / b;
+          }</code></p><br>
+          <h3>try-catch</h3>
+          <p>O try-catch é um mecanismo em JavaScript para tratar erros. O bloco try executa o código que pode gerar uma exceção, enquanto o bloco catch é usado para capturar e tratar qualquer erro que ocorra no bloco try. Se um erro é lançado no try, a execução do bloco é interrompida, e o controle é passado ao catch, permitindo uma manipulação elegante do erro.</p>
+          <p><code>
+            try{ <br>
+                let a = 2 + b <br>
+            }catch(e){<br>
+                console.log(e) <br>
+            }
+          </code></p> <br>
+          <h3>Assertion</h3>
+          <p>Assertion (afirmação) é uma técnica de depuração que verifica se uma condição específica é verdadeira durante a execução de um programa. Se a condição avaliada pela assertion for falsa, o programa normalmente lança um erro ou interrompe a execução. Isso ajuda a detectar bugs precocemente no ciclo de desenvolvimento, assegurando que o estado do programa esteja conforme esperado em pontos críticos.</p>
+          <p><code>function somar(a, b) { <br>
+            const resultado = a + b; <br>
+            if (resultado <= a || resultado <= b) { <br>
+              throw new Error("Assertion falhou: o resultado da soma é incorreto."); <br>
+            } <br>
+            return resultado;
+          }</code></p> <br>
+          <hr>
+    </dev>
 
-        <p>Inserir o número de ocorrencia entre { }</p>
-        <p><code>const telefone = /\d{4,5}-\d{4}/   <br>
+
+
+      <dev class="expreg">
+          <h2>Expressões Regulares (RegExp)</h2>
+          <p>Uma forma de encontrar padrões em uma string, por exemplo: validar se só tem números. <br>
+            Em vez de criarmos funções complexas, podemos encontrar dados em texto por meio das expressões regulares <br> <br>
+            Tambem chamdas de regex</p>
+            <h3>Criando uma expressão regular</h3>
+            <p><code>let rwg1 = new RegExp("test") <br>
+                    let reg2 = /test/</code></p>
+            <h3>Verificando padrões com regex</h3>
+            <p>Depois da definição do padrão por meio da regex, utilizamos o método test() para verificar se o padrão é retornado. <br>
+            Com isso vamos receber a resposta em true ou false</p>
+            <p><code>let test1 = new RegExp('bola') <br> <br>
+                    test1.test("dsajkdsboladsadsa") </code> Retornaria true</p>
+                    <p><code>test1.test("dsaadsa")</code> Retornaria false</p> <br>
+            <h3>Conjuntos</h3>
+            <p>Podemos definir um conjunto de caracteres para encontrar com regex. <br>
+            Basta colocar entre [ ] <br>
+              E com um traço podemos definir um intervalo tambem</p>
+          
+              <p><code>
+            const reg = /[0-9]/ <br>
+            reg.test("Nessa frase temos 5")
+              </code> Retorna true</p><br>
+          
+              <h3>Caracteres Especiais</h3>
+          
+              <p>\d - Qualquer dígito de caractere</p>
+              <p>\w - Um caractere alfanumérico</p>
+              <p>\s - Qualquer caractere de espaço em branco</p>
+              <p>\D - Caracteres que não são digitos</p>
+              <p>\W - Caractere não-alfanumérico</p>
+              <p>\S - Caractere que não seja espaço</p>
+              <p>. - Qualquer caractere, menos nova linha</p>
+              <p>Exemplo: <code>const reg = /\d/</code></p> 
+          
+              <h3>Operador not</h3>
+          
+              <p>Podemos escrever um set que aceitam tudo, menos alguns caracteres com not</p>
+              <p><code>const naoAceitaAeB = /[^ab]/ <br>
+           <br>
+            console.log(naoAceitaAeB.test("a"))
+            </code> False</p>
+            <p><code>console.log(naoAceitaAeB.test("aqui tem a"))</code>True</p>
+            <h3>Operador +</h3>
+            <p>Quando um + está após alguma expressão, este elemento pode se repetir mais de uma vez</p>
+            <p><code>const umNumeroOuMais = /\d+/ <br>
             <br>
-            console.log(telefone.test("4004-5005"))
-            </code> True</p>
-            <p><code>console.log(telefone.test("34004-5005"))</code> True</p>
-            <p><code>
-                console.log(telefone.test("004-5005"))
-                </code> False</p>
-                <p><code>console.log(telefone.test("dsad"))</code> False</p> <br>
-
-        <h3>Método exec</h3>
-
-        <p>O método exec nos retorna um objeto com algumas informações sobre a regex <br> Se nada for encontrado retorna null</p>
-
-        <p><code>const digitos = /\d+/ <br> <br>
-            console.log(digitos.exec("Tem o número 100 aqui"))</code> Retorna um objeto com dados</p>
-            <p><code>console.log(digitos.exec("Tem o número aqui"))</code> Retorna null</p>
+                    console.log(umNumeroOuMais.test("12156165"))</code> True</p>
+                    <p><code>console.log(umNumeroOuMais.test(" "))</code> False</p>
+            <h3>Operador ?</h3>
+                <p>Faz com que o digito seja opicional</p>
+            <p><code>const padrao = /Abacaxi\s?\d/ <br>
+            <br>
+                    console.log(padrao.test("Prova"))</code>True</p>
+                    <p><code>console.log(padrao.test("Prova 1"))</code>True</p>
+                    <p><code>console.log(padrao.test("Prova 2"))</code>True</p>
+            <h3>Operador de precisão</h3>
+            <p>Inserir o número de ocorrencia entre { }</p>
+            <p><code>const telefone = /\d{4,5}-\d{4}/   <br>
+                <br>
+                console.log(telefone.test("4004-5005"))
+                </code> True</p>
+                <p><code>console.log(telefone.test("34004-5005"))</code> True</p>
+                <p><code>
+                    console.log(telefone.test("004-5005"))
+                    </code> False</p>
+                    <p><code>console.log(telefone.test("dsad"))</code> False</p> <br>
+            <h3>Método exec</h3>
+            <p>O método exec nos retorna um objeto com algumas informações sobre a regex <br> Se nada for encontrado retorna null</p>
+            <p><code>const digitos = /\d+/ <br> <br>
+                console.log(digitos.exec("Tem o número 100 aqui"))</code> Retorna um objeto com dados</p>
+                <p><code>console.log(digitos.exec("Tem o número aqui"))</code> Retorna null</p>
+      </dev>
       
 
 
