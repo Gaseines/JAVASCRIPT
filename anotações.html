@@ -17,21 +17,21 @@
         <h1 class="h1Menu" onclick="abre()">Opções <img src="./down.png"></h1> 
         <div class="select">
             <div class="allOpc">
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">ERROS</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Números</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">String</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Operadores</p>
-                <p class=""><input style="cursor: pointer;"  type="checkbox" name="" id="">Árvore DOM</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Condições</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Repetições</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Arrow Function</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Bíblioteca Math</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Array</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Objetos</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">JSON</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Orientação a Objetos</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">DEBUG</p>
-                <p class=""><input style="cursor: pointer;" type="checkbox" name="" id="">Expressões regulares</p>
+                <p class=""><input onclick="clickCheck(err)" checked style="cursor: pointer;" type="checkbox" name="" id="err">ERROS</p>
+                <p class=""><input onclick="clickCheck(num)" checked style="cursor: pointer;" type="checkbox" name="" id="num">Números</p>
+                <p class=""><input onclick="clickCheck(str)" checked style="cursor: pointer;" type="checkbox" name="" id="str">String</p>
+                <p class=""><input onclick="clickCheck(oper)" checked style="cursor: pointer;" type="checkbox" name="" id="oper">Operadores</p>
+                <p class=""><input onclick="clickCheck(dom)" checked style="cursor: pointer;"  type="checkbox" name="" id="dom">Árvore DOM</p>
+                <p class=""><input onclick="clickCheck(cond)" checked style="cursor: pointer;" type="checkbox" name="" id="cond">Condições</p>
+                <p class=""><input onclick="clickCheck(rep)" checked style="cursor: pointer;" type="checkbox" name="" id="rep">Repetições</p>
+                <p class=""><input onclick="clickCheck(arrow)" checked style="cursor: pointer;" type="checkbox" name="" id="arrow">Arrow Function</p>
+                <p class=""><input onclick="clickCheck(math)" checked style="cursor: pointer;" type="checkbox" name="" id="math">Bíblioteca Math</p>
+                <p class=""><input onclick="clickCheck(arr)" checked style="cursor: pointer;" type="checkbox" name="" id="arr">Array</p>
+                <p class=""><input onclick="clickCheck(obj)" checked style="cursor: pointer;" type="checkbox" name="" id="obj">Objetos</p>
+                <p class=""><input onclick="clickCheck(json)" checked style="cursor: pointer;" type="checkbox" name="" id="json">JSON</p>
+                <p class=""><input onclick="clickCheck(oriObj)" checked style="cursor: pointer;" type="checkbox" name="" id="oriObj">Orientação a Objetos</p>
+                <p class=""><input onclick="clickCheck(debug)" checked style="cursor: pointer;" type="checkbox" name="" id="debug">DEBUG</p>
+                <p class=""><input onclick="clickCheck(expreg)" checked style="cursor: pointer;" type="checkbox" name="" id="expreg">Expressões regulares</p>
                 
             </div>
 
@@ -44,7 +44,7 @@
         <p>Para aparecer erros no console, digite "use strict" mo inicio no javascript</p>
     </div>
 
-    <dev>
+    <div class="numeros">
         <h2>Números</h2>
         <h3>Converter para Número</h3>
         <p> Para números inteiros usar : <code>Number.parseInt(n)</code></p>
@@ -57,9 +57,9 @@
         <p>Para colocar cifrão usar: <code>n1.toLocaleString('pt-BR', {style: 'currency', currency: 'brl' })</code></p>
         <p class="ex">1545.5 <br> > R$ 1.545,50</p>
         <hr>
-    </dev>
+    </div>
 
-    <dev class="string">
+    <div class="string">
         <h2>String</h2>
         <h3>Converter para String</h3>
         <p><code>String(s)</code><br> ou <br> <code>n.toString(s)</code></p>
@@ -92,9 +92,9 @@
         <p><code>palavra.repeat(5)</code> Retorna a string repetindo quantas vezes você declarar, nesse caso 5</p>
         <br>
         <hr>
-    </dev>
+    </div>
 
-    <dev class="operadores">
+    <div class="operadores">
         <h2>Operadores</h2>
         <h3>Aritiméticos</h3>
         <p>Soma: + <br> Subtração: - <br> Multiplicação: * <br> Divisão Real: / <br> Divisão Inteira: % <br> Potencia: **</p>
@@ -108,6 +108,9 @@
         <p><code>teste ? true : false</code></p>
         <p>Ex: <br> <code>média >= 7.0 ? "Aprovado" : "Reprovado"</code></p>
         <hr>
+        </div>
+
+        <div class="dom">
         <h2>Árvore DOM</h2>
         <p>Respeitar sempre a hirearquia, começando por <code>window.</code></p>
         <h3>Selecionando</h3>
@@ -119,9 +122,9 @@
         <h2>Eventos DOM</h2>
         <p>link com todos os eventos: <a href="https://developer.mozilla.org/pt-BR/docs/Web/Events" target="_blank">Link</a></p>
         <hr>
-    </dev>
+    </div>
 
-    <dev class="condicoes">
+    <div class="condicoes">
         <h2>Condições</h2>
         <p>Simples: <br>
             <code>if(condição){ <br> <br> }</code></p>
@@ -131,6 +134,10 @@
         <p>Múltipla: <br>
             <code>switch(expressão){ <br> case valor1: <br> <br> case valor2: <br> <br> case valor3: <br> <br> default: <br> <br> }</code></p>
         <hr>
+    </div>
+
+
+    <div class="repeticoes">
         <h2>Repetições</h2>
         <p>Primeiro testa e depois executa: <br>
             <code>while(condição){ <br> <br>}</code></p>
@@ -139,6 +146,9 @@
         <p>Inicia, testa e incrementa: <br>
         <code>for(inicio; teste; incremento){ <br><br> }</code></p>
         <hr>
+    </div>
+
+    <div class="arrow">
         <h2>Arrow Function</h2>
         <h3>Normal</h3>
         <p><code>const RaizQuadrada = (x) => { <br>
@@ -152,14 +162,17 @@
         </code></p>
         
         <hr>
+    </div>
+
+    <div class="math">
         <h2>Biblioteca Math</h2>
         <p>Funções prontas de Matemática</p>
         <p><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank">Link da biblioteca</a></p>
         
         <hr>
-    </dev>
+    </div>
 
-    <dev class="array">
+    <div class="array">
         <h2>Array</h2>
         <p><code>let arr = [ 1, 4, 7, 5, 12]</code></p>
         <p><code>let nomes = ['Gabriel', 'Luiza', 'Mariana']</code></p>
@@ -211,10 +224,10 @@
                 <br>
         
         <hr>
-    </dev>
+    </div>
 
 
-    <dev class="objetos">
+    <div class="objetos">
         <h2>Objetos</h2>
         <p><code>let amigo = {nome:'José',sexo:'M',peso:75.5,engordar(p){}}</code></p>
         <p><code>console.log(amigo.nome)</code> Retorna o nome no Objeto</p>
@@ -265,6 +278,10 @@
         const {nome: vNome, idade: vIdade} = obj <br> <br>
         </code>Pode definir variaveis com as propriedades do objeto. <br> Nesse caso eu poderia ler no console o " vNome " e ele me retornaria o nome do objeto (no caso do objeto " obj ")</p>
         <hr>
+
+        </div>
+
+        <div class="json">
         <h2>JSON</h2>
         <p>JSON = JavaScript Object Notation</p>
         <p>Utilizado para comunicação entre servidores, ex: back end <-> front end</p>
@@ -291,7 +308,7 @@
         let pessoaTexto = JSON.stringify(pessoa)</code> Aqui converte de JSON para String</p>
         <p><code>let pessoaJSON = JSON.parse(pessoaTexto)</code>Aqui converte de String para JSON</p>
         <hr>
-    </dev>
+    </div>
 
 
 
@@ -481,7 +498,7 @@
         <hr>
     </div>
 
-    <dev class="debug">
+    <div class="debug">
         <h2>DEBUG</h2>
         <h3>console.log()</h3>
         <p>O console.log() é uma ferramenta de depuração eficaz em JavaScript por ser direto, fácil de usar, e não requer ferramentas adicionais. Permite visualizar rapidamente valores de variáveis e fluxo de execução, facilitando a identificação e correção de erros. Embora simples, é poderoso para entender o comportamento do código e resolver problemas lógicos.</p> <br>
@@ -516,11 +533,11 @@
             return resultado;
           }</code></p> <br>
           <hr>
-    </dev>
+    </div>
 
 
 
-      <dev class="expreg">
+      <div class="expreg">
           <h2>Expressões Regulares (RegExp)</h2>
           <p>Uma forma de encontrar padrões em uma string, por exemplo: validar se só tem números. <br>
             Em vez de criarmos funções complexas, podemos encontrar dados em texto por meio das expressões regulares <br> <br>
@@ -592,7 +609,7 @@
             <p><code>const digitos = /\d+/ <br> <br>
                 console.log(digitos.exec("Tem o número 100 aqui"))</code> Retorna um objeto com dados</p>
                 <p><code>console.log(digitos.exec("Tem o número aqui"))</code> Retorna null</p>
-      </dev>
+      </div>
       
 
 
