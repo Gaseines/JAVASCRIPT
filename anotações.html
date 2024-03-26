@@ -570,6 +570,7 @@
               <p>\W - Caractere não-alfanumérico</p>
               <p>\S - Caractere que não seja espaço</p>
               <p>. - Qualquer caractere, menos nova linha</p>
+              <p>$ - Caracter q simbolisa o fim da string</p>
               <p>Exemplo: <code>const reg = /\d/</code></p> 
           
               <h3>Operador not</h3>
@@ -609,6 +610,16 @@
             <p><code>const digitos = /\d+/ <br> <br>
                 console.log(digitos.exec("Tem o número 100 aqui"))</code> Retorna um objeto com dados</p>
                 <p><code>console.log(digitos.exec("Tem o número aqui"))</code> Retorna null</p>
+
+                <h3>Choice pattern</h3>
+                <p>Podemos colocar uma instrução na regex que funciona como um || (or) das condicionais</p>
+                <p><code>let frutas = /\d+ (bananas|maçãs|laranjas)/ <br>
+                    <br>
+                console.log("10 bananas")</code> True</p>
+                <p><code>console.log("25 batatas")</code> False</p>
+
+                <h3>Validando Dominios, Emais e Data de nascimento</h3>
+                <p>arquivos: uDemy > Expressoes_regulares > validando...</p>
       </div>
       
 
