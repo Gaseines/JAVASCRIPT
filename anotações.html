@@ -626,8 +626,89 @@
 
       <div class="ass">
         <h2>Programação Assíncrona</h2>
-        <p></p>
-        
+        <p>Ações podem ser executadas ao tempo todo sem uma "fila"</p>
+
+        <h3>Callbacks</h3>
+        <p>Callback é uma função que faz uma ação após algum acontecimento no código. Podemos realizar um callback com a função setTimeout</p>
+
+        <p><code>console.log('5') <br>
+ <br>
+            setTimeout(function(){ <br>
+                console.log('4') <br>
+            }, 2000)</code> Aparece o "4" após 2 segundos</p>
+            
+        <h3>Promises</h3>
+        <p>As primises são ações assíncronas que podem produzir um valor em algum momento no código <br> <br>
+        Uma Forma de dizer a linguagem que um valor pode estar presente em um futuro código <br> <br>
+    O objeto das promises é <b>Promise</b>, <b>resolve</b> é o método que resolve uma <b>Promise</b>, <b>reject</b> é o método de caso de um erro na <b>Promise</b>, o <b>then</b> é o que faz ela poder ser executada em um ponto futuro, o <b>catch</b> é um método utilizado para lidar com erros que podem acontecer durante a execução da <b>Promise</b></p>
+    <p><code>let p = new Promise((resolve, reject) => { <br>
+        const val = 5 <br>
+     <br>
+        if(val.typeOf = Number){ <br>
+            resolve(val) <br>
+        }else{ <br>
+            reject('O dado inserido não é um número') <br>
+        } <br>
+    }) <br>
+     <br>
+    console.log('outros códigos') <br>
+     <br>
+    p.then((value) => {return value + 5}) <br>
+    .then((value) => [console.log(value)])</code></p>
+
+    <h4>Falhas na Promise</h4>
+
+    <p>Explicando o <b>catch</b></p>
+    <p><code>let myPromise = new Promise((resolve, reject) => { <br>
+        const dado = 'Joao' <br>
+     <br>
+        if (dado === 'Gabriel') { <br>
+            resolve('O usuário Gabriel foi encontrado!') <br>
+        } else { <br>
+            reject('O usuário não foi envontrado') <br>
+        } <br>
+    }) <br>
+     <br>
+    myPromise <br>
+        .then((data) => { <br>
+            console.log(data) <br>
+        }).catch((err) => { <br>
+            console.log('Aconteceu o erro: ' + err) <br>
+        })</code> Nesse caso ele retornaria: "Aconteceu o erro: O usuário não foi envontrado"</p>
+
+        <h4>Explicado o <b>reject</b></h4>
+
+        <p><code>function verificarDado(dado){ <br>
+            return new Promise((resolve, reject) => { <br>
+         <br>
+                if (dado === 'Gabriel') { <br>
+                    resolve(console.log('O usuário Gabriel foi encontrado!')) <br>
+                } else { <br>
+                    reject('O usuário não foi encontrado') <br>
+                } <br>
+            }) <br>
+             <br>
+        } <br>
+         <br>
+        verificarDado('Gabriel')</code> Nesse caso ele retornaria: "O usuário Gabriel foi encontrado!"</p>
+        <p><code>verificarDado('Joao')</code>Nesse caso ele retornaria um erro no console com a mensagem: "O usuário não foi encontrado"</p>
+
+        <h4>Várias Promises</h4>
+        <p>Podemos resolver variás <b>Promises</b> de uma vez só, com o método <b>all</b></p>
+        <p><code>let p1 = new Promise(function(resolve, reject){ <br>
+            setTimeout(() =>{ <br>
+                resolve(5) <br>
+            }, 2000) <br>
+        }) <br>
+         <br>
+        let p2 = Promise.resolve(10) <br>
+         <br>
+        let p3 = new Promise((resolve, reject) =>{ <br>
+            resolve(15) <br>
+        }) <br>
+         <br>
+        Promise.all([p1, p2, p3]).then((values) => console.log(values))</code> Retorna um array com todos os resultados das <b>Promises</b></p>
+
     </div>
       
 
