@@ -23,11 +23,20 @@
             <p class="padrao ddl">DELETE</p>
             <p class="padrao ddl">TRUNCATE</p>
 
+            <h2 class="titulo">DQL (Data Query Language)</h2>
+            <p class="padrao ddl">SELECT</p>
+
         </div>
         <div class="anotacoes">
             <h1 class="titulo">Anonotações</h1>
             <p class="comandos padrao"><b class="ddl">CREATE DATABASE</b> <b class="name">"nome do banco de dados"</b></p>
             <p class="descricao padrao">Criar banco de dados</p>
+
+            <p class="comandos padrao"><b class="ddl">SHOW CREATE TABLE </b> <b class="name">"nome da tabela criada"</b></p>
+            <p class="descricao padrao">Mostra o comando que foi usado para criar essa tabela</p>
+
+            <p class="comandos padrao"><b class="ddl">SHOW CREATE DATABASE </b> <b class="name">"nome do banco de dados criada"</b></p>
+            <p class="descricao padrao">Mostra o comando que foi usado para criar esse banco de dados</p>
 
             <h2 class="titulo">Banco de Dados</h2>
 
@@ -46,8 +55,6 @@
             <p class="comandos padrao"><b class="ddl">CREATE TABLE IT NOT EXISTS</b> <b class="name">"nome da tabela"</b>(dados)</p>
             <p class="descricao padrao">Criar tabela. O "it not exist" serve para caso exista outra tabela com o mesmo nome, ele não duplica a tabela</p>
 
-            <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
-            <p class="descricao padrao">Mostra todos os dados da tabela, o * quer dizer "todos"</p>
 
             <p class="comandos padrao"><b class="ddl">DROP TABLE</b> <b class="name">"nome da tabela"</b></p>
             <p class="descricao padrao">deleta a tabela</p>
@@ -98,6 +105,47 @@
 
             <p class="comandos padrao"><b class="ddl">TRUNCATE TABLE </b><b class="name">"nome da tabela"</b></p>
             <p class="descricao padrao">Deleta TODOS OS DADOS DA TABELA</p>
+
+            <h2 class="titulo">SELECT</h2>
+
+            <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
+            <p class="descricao padrao">Mostra todas as colunas da tabela, o * quer dizer "todos"</p>
+
+            <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
+            <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
+            <p class="descricao padrao">Mostra todas as colunas da tabela usando a referência passada (se usar o nome, ele mostra a tabela na ordem dos nomes). Se colocar o parametro <b class="ddl">DESC</b> ele vai mostrar na ordem inversa</p>
+
+            <p class="comandos padrao"><b class="ddl">SELECT <b class="name">"nome da coluna"</b> FROM</b> <b class="name">"nome da tabela"</b></p>
+            <p class="descricao padrao">Mostra apenas aquela coluna específica, pode colocar mais de uma coluna </p>
+
+            <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
+            <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">ano <= '2016'</b></p>
+            <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
+            <p class="descricao padrao">Filtra da mesma forma na ordem que você quiser, mas o <b class="ddl">WHERE</b> é usado para filtrar pela linha, nesse caso ele pegaria os dados apenas menores ou iguais a 2016</p>
+
+            <h4 class="titulo">Operadores lógicos do WHERE</h4>
+
+            <p class="comandos padrao"><b class="ddl">SELECT nome, ano FROM</b> <b class="name">"nome da tabela"</b></p>
+            <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">ano <b class="ddl">BETWEEN</b> 2016</b> <b class="ddl">AND</b> <b class="name">2018</b></p>
+            <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
+            <p class="descricao padrao">Retornará as informações entre os anos 2016 e 2018</p>
+
+            <p class="comandos padrao"><b class="ddl">SELECT nome, ano FROM</b> <b class="name">"nome da tabela"</b></p>
+            <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">ano <b class="ddl">IN</b> (2016, 2020)</b></p>
+            <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
+            <p class="descricao padrao">Retornará as informações que existem apenas nos anos de 2016 e 2018</p>
+
+            <p class="comandos padrao"><b class="ddl">SELECT nome FROM</b> <b class="name">"veiculos"</b></p>
+            <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">portas > 2 </b> <b class="ddl">AND</b> <b class="name">rodas = 4</b></p>
+            <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
+            <p class="descricao padrao">Retornará todos os veículos com mais de 2 portas que tenham 4 rodas</p>
+
+            <p class="comandos padrao"><b class="ddl">SELECT nome FROM</b> <b class="name">"veiculos"</b></p>
+            <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">portas > 2 </b> <b class="ddl">OR</b> <b class="name">rodas = 4</b></p>
+            <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
+            <p class="descricao padrao">(quase a mesma coisa) Retornará todos os veículos com mais de 2 portas OU que tenham 4 rodas</p>
+
+            
 
             
 
