@@ -30,37 +30,37 @@
         <div class="anotacoes">
             <h1 class="titulo">Anonotações</h1>
             <p class="comandos padrao"><b class="ddl">CREATE DATABASE</b> <b class="name">"nome do banco de dados"</b></p>
-            <p class="descricao padrao">Criar banco de dados</p>
+            <p class="descricao padrao">Criar banco de dados</p> <hr>
 
             <p class="comandos padrao"><b class="ddl">SHOW CREATE TABLE </b> <b class="name">"nome da tabela criada"</b></p>
-            <p class="descricao padrao">Mostra o comando que foi usado para criar essa tabela</p>
+            <p class="descricao padrao">Mostra o comando que foi usado para criar essa tabela</p><hr>
 
             <p class="comandos padrao"><b class="ddl">SHOW CREATE DATABASE </b> <b class="name">"nome do banco de dados criada"</b></p>
-            <p class="descricao padrao">Mostra o comando que foi usado para criar esse banco de dados</p>
+            <p class="descricao padrao">Mostra o comando que foi usado para criar esse banco de dados</p><hr>
 
             <h2 class="titulo">Banco de Dados</h2>
 
             <p class="comandos padrao"><b class="ddl">DESCRIBE</b> "nome da tabela"</p>
             <p class="padrao">ou</p>
             <p class="comandos padrao"><b class="ddl">DESC</b> "nome da tabela"</p>
-            <p class="descricao padrao">descrever tabela</p>
+            <p class="descricao padrao">descrever tabela</p><hr>
 
             <p class="comandos padrao"><b class="ddl">DROP DATABASE</b> "nome do banco de dados"</p>
-            <p class="descricao padrao">deleta o banco de dados</p>
+            <p class="descricao padrao">deleta o banco de dados</p><hr>
 
 
 
             <h2 class="titulo">Tabelas</h2>
 
             <p class="comandos padrao"><b class="ddl">CREATE TABLE IT NOT EXISTS</b> <b class="name">"nome da tabela"</b>(dados)</p>
-            <p class="descricao padrao">Criar tabela. O "it not exist" serve para caso exista outra tabela com o mesmo nome, ele não duplica a tabela</p>
+            <p class="descricao padrao">Criar tabela. O "it not exist" serve para caso exista outra tabela com o mesmo nome, ele não duplica a tabela</p><hr>
 
 
             <p class="comandos padrao"><b class="ddl">DROP TABLE</b> <b class="name">"nome da tabela"</b></p>
-            <p class="descricao padrao">deleta a tabela</p>
+            <p class="descricao padrao">deleta a tabela</p><hr>
 
             <p class="comandos padrao"><b class="ddl">INSERT INTO</b> <b class="name">"nome da tabela"</b> <b class="ddl">VALUE</b> (DADOS)</p>
-            <p class="descricao padrao">insere na tabela os dados</p>
+            <p class="descricao padrao">insere na tabela os dados</p><hr>
 
             <h3 class="titulo">ALTER TABLE</h3>
 
@@ -68,86 +68,110 @@
 
             <p class="comandos padrao"><b class="ddl">ADD COLUMN</b> <b class="name">"nome da coluna"</b> <b class="ddl">varchar(20) after </b><b class="name">"nome da segunda coluna"</b></p>
 
-            <p class="descricao padrao">adiciona uma nova coluna, se estiver sem nada vai para ultima coluna, se tiver <b class="ddl">after</b> é adicionado após a coluna informada, e se tiver <b class="ddl">first </b>é adicionado na primeira coluna</p>
+            <p class="descricao padrao">adiciona uma nova coluna, se estiver sem nada vai para ultima coluna, se tiver <b class="ddl">after</b> é adicionado após a coluna informada, e se tiver <b class="ddl">first </b>é adicionado na primeira coluna</p><hr>
 
             <p class="comandos padrao"><b class="ddl">DROP COLUMN</b> <b class="name">"nome da coluna"</b> </p>
 
-            <p class="descricao padrao">deleta a coluna</p>
+            <p class="descricao padrao">deleta a coluna</p><hr>
 
             <p class="comandos padrao"><b class="ddl">ALTER TABLE</b> <b class="name">"nome da tabela"</b></p>
 
             <p class="comandos padrao"><b class="ddl">MODIFY COLUMN</b> <b class="name">"nome da coluna"</b> <b class="ddl">varchar(30) </b> </p>
 
-            <p class="descricao padrao">modifica o tipo da coluna, nesse caso para varchar (30)</p>
+            <p class="descricao padrao">modifica o tipo da coluna, nesse caso para varchar (30)</p><hr>
 
             <p class="comandos padrao"><b class="ddl">ALTER TABLE</b> <b class="name">"nome da tabela"</b></p>
 
             <p class="comandos padrao"><b class="ddl">CHANGE COLUMN</b> <b class="name">"nome da coluna"  "novo nome da coluna" varchar(20)</b></p>
 
-            <p class="descricao padrao">modifica o nome da coluna. Lembrar de sempre colocar o tipo novamente</p>
+            <p class="descricao padrao">modifica o nome da coluna. Lembrar de sempre colocar o tipo novamente</p><hr>
 
             <p class="comandos padrao"><b class="ddl">ALTER TABLE</b> <b class="name">"nome da tabela"</b></p>
 
             <p class="comandos padrao"><b class="ddl">RENAME TO</b> <b class="name">"novo nome da tabela" </b></p>
 
-            <p class="descricao padrao">modifica o nome da tabela.</p>
+            <p class="descricao padrao">modifica o nome da tabela.</p><hr>
 
             <h2 class="titulo">Modificando Linhas</h2>
 
             <p class="comandos padrao"><b class="ddl">UPDATE </b><b class="name">"nome da tabela"</b></p>
             <p class="comandos padrao"><b class="ddl">SET </b>"coluna que você quer alterar" = <b class="name">"alteração"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE </b>"coluna base (geralmente usado o id)" = <b class="name">"dado da coluna base (nesse caso o id da linha)"</b></p>
-            <p class="descricao padrao">Modifica dado da linha, se quiser alterar mais de uma, só colocar a virgula. Se colocar <b class="ddl">LIMIT </b> <b class="name">1</b> na ultima linha, o comando será limitado a uma linha só</p>
+            <p class="descricao padrao">Modifica dado da linha, se quiser alterar mais de uma, só colocar a virgula. Se colocar <b class="ddl">LIMIT </b> <b class="name">1</b> na ultima linha, o comando será limitado a uma linha só</p><hr>
 
             <p class="comandos padrao"><b class="ddl">DELETE FROM </b><b class="name">"nome da tabela"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE </b>"coluna base (geralmente usado o id)" = <b class="name">"dado da coluna base (nesse caso o id da linha)"</b></p>
-            <p class="descricao padrao">Deleta a linha</p>
+            <p class="descricao padrao">Deleta a linha</p><hr>
 
             <p class="comandos padrao"><b class="ddl">TRUNCATE TABLE </b><b class="name">"nome da tabela"</b></p>
-            <p class="descricao padrao">Deleta TODOS OS DADOS DA TABELA</p>
+            <p class="descricao padrao">Deleta TODOS OS DADOS DA TABELA</p><hr>
 
             <h2 class="titulo">SELECT</h2>
 
             <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
-            <p class="descricao padrao">Mostra todas as colunas da tabela, o * quer dizer "todos"</p>
+            <p class="descricao padrao">Mostra todas as colunas da tabela, o * quer dizer "todos"</p><hr>
 
             <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
             <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
-            <p class="descricao padrao">Mostra todas as colunas da tabela usando a referência passada (se usar o nome, ele mostra a tabela na ordem dos nomes). Se colocar o parametro <b class="ddl">DESC</b> ele vai mostrar na ordem inversa</p>
+            <p class="descricao padrao">Mostra todas as colunas da tabela usando a referência passada (se usar o nome, ele mostra a tabela na ordem dos nomes). Se colocar o parametro <b class="ddl">DESC</b> ele vai mostrar na ordem inversa</p><hr>
 
             <p class="comandos padrao"><b class="ddl">SELECT <b class="name">"nome da coluna"</b> FROM</b> <b class="name">"nome da tabela"</b></p>
-            <p class="descricao padrao">Mostra apenas aquela coluna específica, pode colocar mais de uma coluna </p>
+            <p class="descricao padrao">Mostra apenas aquela coluna específica, pode colocar mais de uma coluna </p><hr>
 
             <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"nome da tabela"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">ano <= '2016'</b></p>
             <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
-            <p class="descricao padrao">Filtra da mesma forma na ordem que você quiser, mas o <b class="ddl">WHERE</b> é usado para filtrar pela linha, nesse caso ele pegaria os dados apenas menores ou iguais a 2016</p>
+            <p class="descricao padrao">Filtra da mesma forma na ordem que você quiser, mas o <b class="ddl">WHERE</b> é usado para filtrar pela linha, nesse caso ele pegaria os dados apenas menores ou iguais a 2016</p><hr>
 
             <h4 class="titulo">Operadores lógicos do WHERE</h4>
 
             <p class="comandos padrao"><b class="ddl">SELECT nome, ano FROM</b> <b class="name">"nome da tabela"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">ano <b class="ddl">BETWEEN</b> 2016</b> <b class="ddl">AND</b> <b class="name">2018</b></p>
             <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
-            <p class="descricao padrao">Retornará as informações entre os anos 2016 e 2018</p>
+            <p class="descricao padrao">Retornará as informações entre os anos 2016 e 2018</p><hr>
 
             <p class="comandos padrao"><b class="ddl">SELECT nome, ano FROM</b> <b class="name">"nome da tabela"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">ano <b class="ddl">IN</b> (2016, 2020)</b></p>
             <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
-            <p class="descricao padrao">Retornará as informações que existem apenas nos anos de 2016 e 2018</p>
+            <p class="descricao padrao">Retornará as informações que existem apenas nos anos de 2016 e 2018</p><hr>
 
             <p class="comandos padrao"><b class="ddl">SELECT nome FROM</b> <b class="name">"veiculos"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">portas > 2 </b> <b class="ddl">AND</b> <b class="name">rodas = 4</b></p>
             <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
-            <p class="descricao padrao">Retornará todos os veículos com mais de 2 portas que tenham 4 rodas</p>
+            <p class="descricao padrao">Retornará todos os veículos com mais de 2 portas que tenham 4 rodas</p><hr>
 
             <p class="comandos padrao"><b class="ddl">SELECT nome FROM</b> <b class="name">"veiculos"</b></p>
             <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">portas > 2 </b> <b class="ddl">OR</b> <b class="name">rodas = 4</b></p>
             <p class="comandos padrao"><b class="ddl">ORDER BY</b> <b class="name">"nome da coluna que é usada como parâmetro"</b></p>
-            <p class="descricao padrao">(quase a mesma coisa) Retornará todos os veículos com mais de 2 portas OU que tenham 4 rodas</p>
+            <p class="descricao padrao">(quase a mesma coisa) Retornará todos os veículos com mais de 2 portas OU que tenham 4 rodas</p><hr>
 
+            <p class="comandos padrao"><b class="ddl">SELECT * FROM</b> <b class="name">"cursos"</b></p>
+            <p class="comandos padrao"><b class="ddl">WHERE</b> <b class="name">nome</b> <b class="ddl">LIKE</b> <b class="name">'PH%P_'</b></p>
+            <p class="descricao padrao">Seleciona todos os registros da tabela "cursos" onde o valor na coluna nome começa com "PH", seguido de qualquer número de caracteres, seguido por "P", e terminando com exatamente um caractere.</p><hr>
             
+            <p class="comandos padrao"><b class="ddl">SELECT DISTINCT</b> <b class="name">nacionalidade</b><b class="ddl"> FROM</b><b class="name"> alunos</b></p>
+            <p class="descricao padrao">Retorna uma lista de nacionalidades únicas presentes na coluna nacionalidade, removendo quaisquer duplicidade</p><hr>
 
-            
+            <p class="comandos padrao"><b class="ddl">SELECT COUNT(*)</b><b class="ddl"> FROM</b><b class="name"> carros</b></p>
+            <p class="padrao"><b class="ddl">WHERE</b> <b class="name">marca = 'HONDA'</b></p>
+            <p class="descricao padrao">Retorna quantos registros existem na tabela "carros" onde a coluna marca tem o valor "HONDA"</p><hr>
+
+            <p class="comandos padrao"><b class="ddl">SELECT MAX( <b class="name">idade</b> )</b><b class="ddl"> FROM</b><b class="name"> pessoas</b></p>
+            <p class="descricao padrao">Retorna o valor máximo encontrado na coluna idade da tabela "pessoas"</p><hr>
+
+            <p class="comandos padrao"><b class="ddl">SELECT MIN( <b class="name">idade</b> )</b><b class="ddl"> FROM</b><b class="name"> pessoas</b></p>
+            <p class="descricao padrao">Retorna o valor mínimo encontrado na coluna idade da tabela "pessoas"</p><hr>
+
+            <p class="comandos padrao"><b class="ddl">SELECT SUM( <b class="name">idade</b> )</b><b class="ddl"> FROM</b><b class="name"> pessoas</b></p>
+            <p class="descricao padrao">Retorna o valor da soma  da  idade de todas as "pessoas"</p><hr>
+
+            <p class="comandos padrao"><b class="ddl">SELECT AVG( <b class="name">idade</b> )</b><b class="ddl"> FROM</b><b class="name"> pessoas</b></p>
+            <p class="descricao padrao">Retorna a média  da  idade de todas as "pessoas"</p><hr>
+
+            <p class="comandos padrao"><b class="ddl">SELECT <b class="name">ano, </b>COUNT( <b class="name">*</b> )</b><b class="ddl"> FROM</b><b class="name"> cursos</b></p>
+            <p class="padrao"><b class="ddl">GROUP BY</b> <b class="name">ano</b></p>
+            <p class="padrao"><b class="ddl">HAVING COUNT(*)</b><b class="name"> > 2</b></p>
+            <p class="descricao padrao">Seleciona os anos e a contagem de cursos para cada ano na tabela "cursos", agrupando pelos anos e retornando apenas os anos que têm mais de 2 cursos</p><hr>
 
         </div>
         <div class="primitivos">
