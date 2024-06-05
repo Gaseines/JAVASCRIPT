@@ -1,0 +1,4 @@
+Baixar Express = npm install express --save
+
+Baixar o nodemon (atualiza o servidor autumaticamente) = npm install nodemon -g
+(o -g quer dizer globalmente, nao apenas na pasta)
