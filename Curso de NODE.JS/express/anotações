@@ -1,4 +1,12 @@
-Baixar Express = npm install express --save
+Instalar Express = npm install express --save           (Serve para criar o servidor)
 
-Baixar o nodemon (atualiza o servidor autumaticamente) = npm install nodemon -g
+Instalar o nodemon (atualiza o servidor autumaticamente) = npm install nodemon -g
 (o -g quer dizer globalmente, nao apenas na pasta)
+
+Instalar o Sequelize = npm install sequelize --save      (Facilita a manipulação do banco de dados)
+
+Instalar para mexer com MYSQL = npm install mysql2 --save
+
+Instalar Handlebars = npm install express-handlebars --save
+
+
