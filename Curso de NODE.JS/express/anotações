@@ -9,4 +9,6 @@ Instalar para mexer com MYSQL = npm install mysql2 --save
 
 Instalar Handlebars = npm install express-handlebars --save
 
+Instalar BodyParser = npm install body-parser --save (Para receber dados do formulário)
+
 
