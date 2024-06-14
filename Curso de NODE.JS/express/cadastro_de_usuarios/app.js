@@ -4,6 +4,7 @@ const handlebars = require('express-handlebars')
 const db = require('./db/connection')
 const path = require('path')
 const bodyParser = require('body-parser')
+const Post = require('./models/Post')
 
 //Porta
 const port = 7077
@@ -42,14 +43,35 @@ app.listen(port, (req, res) => {
     console.log(`Conectado a porta ${port}`)
 })
 
+//ROTAS
+
+app.get('/', (req, res) => {
+  Post.findAll({order: [['id', 'DESC']]})
+  .then((posts) => {
+    res.render('index', {posts: posts})
+  })
+})
 
 app.get('/cad', (req, res) => {
-  res.render('layouts/formulario')
+  res.render('formulario')
 })
 
 app.post('/add', (req, res) => {
-  res.send('Título: '+req.body.titulo+' Conteúdo: '+req.body.conteudo)
+  Post.create({
+    titulo: req.body.titulo,
+    conteudo: req.body.conteudo
+  }).then(() => {
+    res.redirect('/')
+  }).catch(err => {
+    res.send(err)
+  })
 })
 
-
-
+app.get('/delete/:id', (req, res) => {
+  Post.destroy({where: {id: req.params.id}})
+  .then(() => {
+    res.send('Postagem deletada com sucesso!')
+  }).catch(err => {
+    res.send('Esta postagem não existe!')
+  })
+})
