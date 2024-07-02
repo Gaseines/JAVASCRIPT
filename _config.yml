@@ -1,0 +1,25 @@
+# _config.yml
+title: JAVASCRIPT
+description: estudos
+baseurl: "" # a URL base do seu site, ex. /blog
+url: "https://gaseines.github.io/JAVASCRIPT/" # a URL do seu site
+
+# Excluindo arquivos e diretórios desnecessários
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - .github
+  - vendor
+
+# Outras configurações do Jekyll
+theme: jekyll-theme-primer
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
