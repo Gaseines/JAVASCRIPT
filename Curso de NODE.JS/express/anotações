@@ -11,4 +11,6 @@ Instalar Handlebars = npm install express-handlebars --save
 
 Instalar BodyParser = npm install body-parser --save (Para receber dados do formulário)
 
+------------MONGO---------------------------------------------
 
+Instalar Mongoose = npm --save mongoose    (Utilizado para fazer projetos com o MongoDB)

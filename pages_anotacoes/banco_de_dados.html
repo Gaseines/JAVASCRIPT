@@ -416,6 +416,21 @@
             <p class="descricao padrao">Vai incrementar mais 2000 para o salario do Gabriel (Amém). Se caso queira tirar o valor, basta apenas colocar - na frente do valor ( -1000 )</p>
             <hr>
 
+            <h3 class="subtitulo">Criar Index</h3>
+            <p class="comandos padrao"><b class="ddl">db.nomeDaCollection.createIndexes({"nome": 1})</b></p>
+            <p class="descricao padrao">Cria um index no banco, nesse caso seria junto com o "nome", isso depende da pesquisa do seu site, se a pesquisa seria mais pelo nome, é melhor criar um index nele para que a pesquisa seja mais rapida</p>
+            <hr>
+
+            <h3 class="subtitulo">Verificar Indexes</h3>
+            <p class="comandos padrao"><b class="ddl">db.nomeDaCollection.getIndexes()</b></p>
+            <p class="descricao padrao">Verifica quais indexes o banco possue</p>
+            <hr>
+
+            <h3 class="subtitulo">Deletar Index</h3>
+            <p class="comandos padrao"><b class="ddl">db.nomeDaCollection.dropIndex("nome_1")</b></p>
+            <p class="descricao padrao">Deleta o index colocado nas propriedades</p>
+            <hr>
+
 
 
         </div>
